@@ -1,0 +1,523 @@
+{
+  "pipelineConfig" : {
+    "schemaVersion" : 6,
+    "version" : 16,
+    "pipelineId" : "KafkaProducerd739e45c-2503-40f6-bee9-9646649ff50c",
+    "title" : "KafkaProducer",
+    "description" : "",
+    "uuid" : "17126ecd-16aa-402b-b942-342f7c3ce56a",
+    "configuration" : [ {
+      "name" : "executionMode",
+      "value" : "BATCH"
+    }, {
+      "name" : "edgeHttpUrl",
+      "value" : "http://localhost:18633"
+    }, {
+      "name" : "deliveryGuarantee",
+      "value" : "AT_LEAST_ONCE"
+    }, {
+      "name" : "testOriginStage",
+      "value" : "streamsets-datacollector-dev-lib::com_streamsets_pipeline_stage_devtest_rawdata_RawDataDSource::3"
+    }, {
+      "name" : "startEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "stopEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "shouldRetry",
+      "value" : true
+    }, {
+      "name" : "triggerInterval",
+      "value" : 2000
+    }, {
+      "name" : "retryAttempts",
+      "value" : -1
+    }, {
+      "name" : "ludicrousMode",
+      "value" : false
+    }, {
+      "name" : "ludicrousModeInputCount",
+      "value" : false
+    }, {
+      "name" : "advancedErrorHandling",
+      "value" : false
+    }, {
+      "name" : "notifyOnStates",
+      "value" : [ "RUN_ERROR", "STOPPED", "FINISHED" ]
+    }, {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : [ ]
+    }, {
+      "name" : "badRecordsHandling",
+      "value" : null
+    }, {
+      "name" : "errorRecordPolicy",
+      "value" : "ORIGINAL_RECORD"
+    }, {
+      "name" : "workerCount",
+      "value" : 0
+    }, {
+      "name" : "clusterSlaveMemory",
+      "value" : 2048
+    }, {
+      "name" : "clusterSlaveJavaOpts",
+      "value" : "-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dlog4j.debug"
+    }, {
+      "name" : "clusterLauncherEnv",
+      "value" : [ ]
+    }, {
+      "name" : "mesosDispatcherURL",
+      "value" : null
+    }, {
+      "name" : "logLevel",
+      "value" : "ERROR"
+    }, {
+      "name" : "hdfsS3ConfDir",
+      "value" : null
+    }, {
+      "name" : "rateLimit",
+      "value" : 0
+    }, {
+      "name" : "maxRunners",
+      "value" : 0
+    }, {
+      "name" : "shouldCreateFailureSnapshot",
+      "value" : true
+    }, {
+      "name" : "runnerIdleTIme",
+      "value" : 60
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    }, {
+      "name" : "sparkConfigs",
+      "value" : [ {
+        "key" : "spark.driver.memory",
+        "value" : "2G"
+      }, {
+        "key" : "spark.driver.cores",
+        "value" : "1"
+      }, {
+        "key" : "spark.executor.memory",
+        "value" : "2G"
+      }, {
+        "key" : "spark.executor.cores",
+        "value" : "1"
+      }, {
+        "key" : "spark.dynamicAllocation.enabled",
+        "value" : "true"
+      }, {
+        "key" : "spark.dynamicAllocation.minExecutors",
+        "value" : "1"
+      } ]
+    }, {
+      "name" : "preprocessScript",
+      "value" : "/*\nThe following script define a method\nthat increments an integer by 1 \nand registers it as a UDF with \nthe SparkSession, which can be accessed\nusing the variable named \"spark\":\ndef inc(i: Integer): Integer = {\n  i + 1\n}\nspark.udf.register (\"inc\", inc _)\n\n*/"
+    }, {
+      "name" : "clusterConfig.clusterType",
+      "value" : "LOCAL"
+    }, {
+      "name" : "clusterConfig.sparkMasterUrl",
+      "value" : "local[*]"
+    }, {
+      "name" : "clusterConfig.deployMode",
+      "value" : "CLIENT"
+    }, {
+      "name" : "clusterConfig.hadoopUserName",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.sparkAppName",
+      "value" : "${pipeline:title()}"
+    }, {
+      "name" : "clusterConfig.stagingDir",
+      "value" : "/streamsets"
+    }, {
+      "name" : "clusterConfig.useYarnKerberosKeytab",
+      "value" : false
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytabSource",
+      "value" : "PROPERTIES_FILE"
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytab",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.yarnKerberosPrincipal",
+      "value" : "name@DOMAIN"
+    }, {
+      "name" : "databricksConfig.baseUrl",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.credentialType",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.username",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.password",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.token",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.provisionNewCluster",
+      "value" : true
+    }, {
+      "name" : "databricksConfig.clusterId",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.clusterConfig",
+      "value" : "{\n    \"num_workers\": 8,\n    \"spark_version\": \"5.3.x-scala2.11\",\n    \"node_type_id\": \"i3.xlarge\"\n}"
+    }, {
+      "name" : "databricksConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "livyConfig.baseUrl",
+      "value" : "https://localhost:30443/gateway/default/livy/v1/"
+    }, {
+      "name" : "livyConfig.username",
+      "value" : null
+    }, {
+      "name" : "livyConfig.password",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegion",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegionCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.accessKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.secretKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.s3StagingUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.provisionNewCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.clusterId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.clusterPrefix",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.loggingEnabled",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.s3LogUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.enableEMRDebugging",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.serviceRole",
+      "value" : "EMR_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.jobFlowRole",
+      "value" : "EMR_EC2_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.visibleToAllUsers",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.ec2SubnetId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.instanceCount",
+      "value" : 2
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "statsAggregatorStage",
+      "value" : ""
+    } ],
+    "uiInfo" : {
+      "previewConfig" : {
+        "previewSource" : "CONFIGURED_SOURCE",
+        "batchSize" : 10,
+        "timeout" : 120000,
+        "writeToDestinations" : false,
+        "executeLifecycleEvents" : false,
+        "showHeader" : false,
+        "showFieldType" : true,
+        "rememberMe" : true,
+        "endStage" : ""
+      }
+    },
+    "fragments" : [ ],
+    "stages" : [ {
+      "instanceName" : "DevRawDataSource_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_dev_RawDataDOrigin",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "conf.dataFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "conf.dataFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "conf.dataFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "conf.dataFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "conf.dataFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "conf.dataFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "conf.dataFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "conf.dataFormatConfig.multiLineJson",
+        "value" : false
+      }, {
+        "name" : "conf.schemaConfigBean.schemaMode",
+        "value" : "INFER"
+      }, {
+        "name" : "conf.schemaConfigBean.customSchemaString",
+        "value" : null
+      }, {
+        "name" : "conf.schemaConfigBean.parseErrorMode",
+        "value" : "PERMISSIVE"
+      }, {
+        "name" : "conf.schemaConfigBean.columnNameOfCorruptRecord",
+        "value" : null
+      }, {
+        "name" : "conf.rawData",
+        "value" : "customer_id,customer_fname,customer_lname,customer_email,customer_password,customer_street,customer_city,customer_state,customer_zipcode\n1,Richard,Hernandez,XXXXXXXXX,XXXXXXXXX,4963 Ponderosa Ct,Park City,UT,84098"
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : false
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      }, {
+        "name" : "conf.dataFormatConfig.avroIgnoreExtension",
+        "value" : true
+      }, {
+        "name" : "conf.dataFormatConfig.avroSchema",
+        "value" : null
+      } ],
+      "uiInfo" : {
+        "yPos" : 51,
+        "stageType" : "SOURCE",
+        "icon" : "dev.png",
+        "description" : "",
+        "label" : "Dev Raw Data Source",
+        "xPos" : 54
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "DevRawDataSource_01OutputLane15700316222360" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "Kafka_02",
+      "library" : "streamsets-spark-kafka-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_kafka_KafkaDDestination",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.bootstrapServers",
+        "value" : "localhost:9092"
+      }, {
+        "name" : "conf.topic",
+        "value" : "topic1"
+      }, {
+        "name" : "conf.extraConfigs",
+        "value" : [ ]
+      }, {
+        "name" : "conf.dataFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "conf.avroSchemaConfigBean.avroSchemaSource",
+        "value" : null
+      }, {
+        "name" : "conf.avroSchemaConfigBean.avroSchema",
+        "value" : null
+      }, {
+        "name" : "conf.avroSchemaConfigBean.registerSchema",
+        "value" : false
+      }, {
+        "name" : "conf.avroSchemaConfigBean.schemaRegistryUrlsForRegistration",
+        "value" : [ ]
+      }, {
+        "name" : "conf.avroSchemaConfigBean.schemaRegistryUrls",
+        "value" : [ ]
+      }, {
+        "name" : "conf.avroSchemaConfigBean.schemaLookupMode",
+        "value" : "SUBJECT"
+      }, {
+        "name" : "conf.avroSchemaConfigBean.subject",
+        "value" : null
+      }, {
+        "name" : "conf.avroSchemaConfigBean.subjectToRegister",
+        "value" : null
+      }, {
+        "name" : "conf.avroSchemaConfigBean.schemaId",
+        "value" : null
+      }, {
+        "name" : "conf.avroSchemaConfigBean.avroCompression",
+        "value" : "NULL"
+      }, {
+        "name" : "conf.fieldToWrite",
+        "value" : null
+      }, {
+        "name" : "conf.securityConfigBean.securityOption",
+        "value" : "PLAINTEXT"
+      }, {
+        "name" : "conf.securityConfigBean.kerberosServiceName",
+        "value" : null
+      }, {
+        "name" : "conf.securityConfigBean.truststoreLocation",
+        "value" : null
+      }, {
+        "name" : "conf.securityConfigBean.truststorePassword",
+        "value" : null
+      }, {
+        "name" : "conf.securityConfigBean.keystoreLocation",
+        "value" : null
+      }, {
+        "name" : "conf.securityConfigBean.keystorePassword",
+        "value" : null
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "TARGET",
+        "icon" : "kafka.png",
+        "description" : "",
+        "label" : "Kafka",
+        "xPos" : 280
+      },
+      "inputLanes" : [ "DevRawDataSource_01OutputLane15700316222360" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "errorStage" : null,
+    "info" : {
+      "pipelineId" : "KafkaProducerd739e45c-2503-40f6-bee9-9646649ff50c",
+      "title" : "KafkaProducer",
+      "description" : "",
+      "created" : 1570467020909,
+      "lastModified" : 1570467020920,
+      "creator" : "admin",
+      "lastModifier" : "admin",
+      "lastRev" : "0",
+      "uuid" : "17126ecd-16aa-402b-b942-342f7c3ce56a",
+      "valid" : true,
+      "metadata" : {
+        "labels" : [ ]
+      },
+      "name" : "KafkaProducerd739e45c-2503-40f6-bee9-9646649ff50c",
+      "sdcVersion" : "3.12.0-SNAPSHOT",
+      "sdcId" : "32664848-e7c8-11e9-8e5c-bd27fc4173b1"
+    },
+    "metadata" : {
+      "labels" : [ ]
+    },
+    "statsAggregatorStage" : null,
+    "startEventStages" : [ ],
+    "stopEventStages" : [ ],
+    "testOriginStage" : null,
+    "valid" : true,
+    "issues" : {
+      "pipelineIssues" : [ ],
+      "stageIssues" : { },
+      "issueCount" : 0
+    },
+    "previewable" : false
+  },
+  "pipelineRules" : {
+    "schemaVersion" : 3,
+    "version" : 2,
+    "metricsRuleDefinitions" : [ {
+      "id" : "badRecordsAlertID",
+      "alertText" : "High incidence of Error Records",
+      "metricId" : "pipeline.batchErrorRecords.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1570031594571,
+      "valid" : true
+    }, {
+      "id" : "stageErrorAlertID",
+      "alertText" : "High incidence of Stage Errors",
+      "metricId" : "pipeline.batchErrorMessages.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1570031594571,
+      "valid" : true
+    }, {
+      "id" : "idleGaugeID",
+      "alertText" : "Pipeline is Idle",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "TIME_OF_LAST_RECEIVED_RECORD",
+      "condition" : "${time:now() - value() > 120000}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1570031594571,
+      "valid" : true
+    }, {
+      "id" : "batchTimeAlertID",
+      "alertText" : "Batch taking more time to process",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "CURRENT_BATCH_AGE",
+      "condition" : "${value() > 200}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1570031594571,
+      "valid" : true
+    } ],
+    "dataRuleDefinitions" : [ ],
+    "driftRuleDefinitions" : [ ],
+    "uuid" : "6001082d-48db-4055-ac1e-4d40a1585588",
+    "configuration" : [ {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    } ],
+    "ruleIssues" : null,
+    "configIssues" : null
+  },
+  "libraryDefinitions" : null
+}

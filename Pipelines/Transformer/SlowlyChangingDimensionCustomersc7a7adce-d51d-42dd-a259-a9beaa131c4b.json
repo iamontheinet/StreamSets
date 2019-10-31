@@ -1,0 +1,698 @@
+{
+  "pipelineConfig" : {
+    "schemaVersion" : 6,
+    "version" : 16,
+    "pipelineId" : "SlowlyChangingDimensionCustomersc7a7adce-d51d-42dd-a259-a9beaa131c4b",
+    "title" : "SlowlyChangingDimensionCustomers",
+    "description" : "",
+    "uuid" : "6b0df38b-097c-4a88-8397-e202405ca385",
+    "configuration" : [ {
+      "name" : "executionMode",
+      "value" : "BATCH"
+    }, {
+      "name" : "edgeHttpUrl",
+      "value" : "http://localhost:18633"
+    }, {
+      "name" : "deliveryGuarantee",
+      "value" : "AT_LEAST_ONCE"
+    }, {
+      "name" : "testOriginStage",
+      "value" : "streamsets-datacollector-dev-lib::com_streamsets_pipeline_stage_devtest_rawdata_RawDataDSource::3"
+    }, {
+      "name" : "startEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "stopEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "shouldRetry",
+      "value" : true
+    }, {
+      "name" : "triggerInterval",
+      "value" : 2000
+    }, {
+      "name" : "retryAttempts",
+      "value" : -1
+    }, {
+      "name" : "ludicrousMode",
+      "value" : false
+    }, {
+      "name" : "ludicrousModeInputCount",
+      "value" : false
+    }, {
+      "name" : "advancedErrorHandling",
+      "value" : false
+    }, {
+      "name" : "notifyOnStates",
+      "value" : [ "RUN_ERROR", "STOPPED", "FINISHED" ]
+    }, {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : [ ]
+    }, {
+      "name" : "badRecordsHandling",
+      "value" : null
+    }, {
+      "name" : "errorRecordPolicy",
+      "value" : "ORIGINAL_RECORD"
+    }, {
+      "name" : "workerCount",
+      "value" : 0
+    }, {
+      "name" : "clusterSlaveMemory",
+      "value" : 2048
+    }, {
+      "name" : "clusterSlaveJavaOpts",
+      "value" : "-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dlog4j.debug"
+    }, {
+      "name" : "clusterLauncherEnv",
+      "value" : [ ]
+    }, {
+      "name" : "mesosDispatcherURL",
+      "value" : null
+    }, {
+      "name" : "logLevel",
+      "value" : "ERROR"
+    }, {
+      "name" : "hdfsS3ConfDir",
+      "value" : null
+    }, {
+      "name" : "rateLimit",
+      "value" : 0
+    }, {
+      "name" : "maxRunners",
+      "value" : 0
+    }, {
+      "name" : "shouldCreateFailureSnapshot",
+      "value" : true
+    }, {
+      "name" : "runnerIdleTIme",
+      "value" : 60
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    }, {
+      "name" : "sparkConfigs",
+      "value" : [ {
+        "key" : "spark.driver.memory",
+        "value" : "2G"
+      }, {
+        "key" : "spark.driver.cores",
+        "value" : "1"
+      }, {
+        "key" : "spark.executor.memory",
+        "value" : "2G"
+      }, {
+        "key" : "spark.executor.cores",
+        "value" : "1"
+      }, {
+        "key" : "spark.dynamicAllocation.enabled",
+        "value" : "true"
+      }, {
+        "key" : "spark.dynamicAllocation.minExecutors",
+        "value" : "1"
+      } ]
+    }, {
+      "name" : "preprocessScript",
+      "value" : "/*\nThe following script define a method\nthat increments an integer by 1 \nand registers it as a UDF with \nthe SparkSession, which can be accessed\nusing the variable named \"spark\":\ndef inc(i: Integer): Integer = {\n  i + 1\n}\nspark.udf.register (\"inc\", inc _)\n\n*/"
+    }, {
+      "name" : "clusterConfig.clusterType",
+      "value" : "LOCAL"
+    }, {
+      "name" : "clusterConfig.sparkMasterUrl",
+      "value" : "local[*]"
+    }, {
+      "name" : "clusterConfig.deployMode",
+      "value" : "CLIENT"
+    }, {
+      "name" : "clusterConfig.hadoopUserName",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.sparkAppName",
+      "value" : "${pipeline:title()}"
+    }, {
+      "name" : "clusterConfig.stagingDir",
+      "value" : "/streamsets"
+    }, {
+      "name" : "clusterConfig.useYarnKerberosKeytab",
+      "value" : false
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytabSource",
+      "value" : "PROPERTIES_FILE"
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytab",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.yarnKerberosPrincipal",
+      "value" : "name@DOMAIN"
+    }, {
+      "name" : "databricksConfig.baseUrl",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.credentialType",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.username",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.password",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.token",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.provisionNewCluster",
+      "value" : true
+    }, {
+      "name" : "databricksConfig.clusterId",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.clusterConfig",
+      "value" : "{\n    \"num_workers\": 8,\n    \"spark_version\": \"5.3.x-scala2.11\",\n    \"node_type_id\": \"i3.xlarge\"\n}"
+    }, {
+      "name" : "databricksConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "livyConfig.baseUrl",
+      "value" : "https://localhost:30443/gateway/default/livy/v1/"
+    }, {
+      "name" : "livyConfig.username",
+      "value" : null
+    }, {
+      "name" : "livyConfig.password",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegion",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegionCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.accessKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.secretKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.s3StagingUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.provisionNewCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.clusterId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.clusterPrefix",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.loggingEnabled",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.s3LogUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.enableEMRDebugging",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.serviceRole",
+      "value" : "EMR_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.jobFlowRole",
+      "value" : "EMR_EC2_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.visibleToAllUsers",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.ec2SubnetId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.instanceCount",
+      "value" : 2
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "statsAggregatorStage",
+      "value" : ""
+    } ],
+    "uiInfo" : {
+      "previewConfig" : {
+        "previewSource" : "CONFIGURED_SOURCE",
+        "batchSize" : 10,
+        "timeout" : 120000,
+        "writeToDestinations" : false,
+        "executeLifecycleEvents" : false,
+        "showHeader" : false,
+        "showFieldType" : true,
+        "rememberMe" : true,
+        "endStage" : ""
+      }
+    },
+    "fragments" : [ ],
+    "stages" : [ {
+      "instanceName" : "File_01",
+      "library" : "streamsets-spark-file-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_fs_FileDOrigin",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "configBean.fileNamePattern",
+        "value" : "customers_5.csv"
+      }, {
+        "name" : "configBean.fileNameExcludePattern",
+        "value" : null
+      }, {
+        "name" : "configBean.batchNumFileLimit",
+        "value" : 0
+      }, {
+        "name" : "configBean.schemaConfigBean.schemaMode",
+        "value" : "INFER"
+      }, {
+        "name" : "configBean.schemaConfigBean.customSchemaString",
+        "value" : null
+      }, {
+        "name" : "configBean.schemaConfigBean.parseErrorMode",
+        "value" : "PERMISSIVE"
+      }, {
+        "name" : "configBean.schemaConfigBean.columnNameOfCorruptRecord",
+        "value" : null
+      }, {
+        "name" : "configBean.postProcessType",
+        "value" : "NONE"
+      }, {
+        "name" : "configBean.archiveDir",
+        "value" : null
+      }, {
+        "name" : "configBean.dataFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "configBean.dataFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "configBean.dataFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "configBean.dataFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "configBean.dataFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "configBean.dataFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "configBean.dataFormatConfig.multiLineJson",
+        "value" : false
+      }, {
+        "name" : "configBean.path",
+        "value" : "/Users/dash/data/"
+      }, {
+        "name" : "configBean.dataFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "configBean.hdfsProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : true
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      }, {
+        "name" : "configBean.dataFormatConfig.avroIgnoreExtension",
+        "value" : true
+      }, {
+        "name" : "configBean.dataFormatConfig.avroSchema",
+        "value" : null
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "SOURCE",
+        "icon" : "directory.png",
+        "description" : "",
+        "label" : "5 rows",
+        "xPos" : 60
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "File_01OutputLane15677958582070" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "File_02",
+      "library" : "streamsets-spark-file-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_fs_FileDOrigin",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "configBean.fileNamePattern",
+        "value" : "customers_update.csv"
+      }, {
+        "name" : "configBean.fileNameExcludePattern",
+        "value" : null
+      }, {
+        "name" : "configBean.batchNumFileLimit",
+        "value" : 0
+      }, {
+        "name" : "configBean.schemaConfigBean.schemaMode",
+        "value" : "INFER"
+      }, {
+        "name" : "configBean.schemaConfigBean.customSchemaString",
+        "value" : null
+      }, {
+        "name" : "configBean.schemaConfigBean.parseErrorMode",
+        "value" : "PERMISSIVE"
+      }, {
+        "name" : "configBean.schemaConfigBean.columnNameOfCorruptRecord",
+        "value" : null
+      }, {
+        "name" : "configBean.postProcessType",
+        "value" : "NONE"
+      }, {
+        "name" : "configBean.archiveDir",
+        "value" : null
+      }, {
+        "name" : "configBean.dataFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "configBean.dataFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "configBean.dataFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "configBean.dataFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "configBean.dataFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "configBean.dataFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "configBean.dataFormatConfig.multiLineJson",
+        "value" : false
+      }, {
+        "name" : "configBean.path",
+        "value" : "/Users/dash/data/"
+      }, {
+        "name" : "configBean.dataFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "configBean.hdfsProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : true
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      }, {
+        "name" : "configBean.dataFormatConfig.avroIgnoreExtension",
+        "value" : true
+      }, {
+        "name" : "configBean.dataFormatConfig.avroSchema",
+        "value" : null
+      } ],
+      "uiInfo" : {
+        "yPos" : 200,
+        "stageType" : "SOURCE",
+        "icon" : "directory.png",
+        "description" : "",
+        "label" : "1 update",
+        "xPos" : 60
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "File_02OutputLane15677959908090" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SlowlyChangingDimension_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_processor_scd_SCDDProcessor",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.scdType",
+        "value" : "TYPE_2"
+      }, {
+        "name" : "conf.outputFullMasterData",
+        "value" : true
+      }, {
+        "name" : "conf.copyNullsFromOriginal",
+        "value" : true
+      }, {
+        "name" : "conf.extraColumnMode",
+        "value" : "DROP"
+      }, {
+        "name" : "conf.naturalKeyColumns",
+        "value" : [ "customer_id" ]
+      }, {
+        "name" : "conf.managedColumnConfigs",
+        "value" : [ {
+          "managedColumnType" : "VERSION_INCREMENT",
+          "managedColumnName" : "version"
+        } ]
+      }, {
+        "name" : "conf.timestampBasis",
+        "value" : "CALCULATE_NOW"
+      }, {
+        "name" : "conf.timestampBasisField",
+        "value" : null
+      }, {
+        "name" : "conf.type2ForAllChanges",
+        "value" : true
+      }, {
+        "name" : "conf.type2IncludeFields",
+        "value" : [ ]
+      }, {
+        "name" : "conf.type2ExcludeFields",
+        "value" : [ ]
+      } ],
+      "uiInfo" : {
+        "yPos" : 180,
+        "stageType" : "PROCESSOR",
+        "icon" : "iconfinder_Hosting-19_2106411.png",
+        "description" : "",
+        "inputStreamLabels" : [ "Master Data", "Change Input" ],
+        "label" : "Slowly Changing Dimension",
+        "xPos" : 280
+      },
+      "inputLanes" : [ "File_01OutputLane15677958582070", "File_02OutputLane15677959908090" ],
+      "outputLanes" : [ "SlowlyChangingDimension_01OutputLane15677977380220" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "Repartition_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_repartition_RepartitionDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.repartitionType",
+        "value" : "PARTITION_COUNT"
+      }, {
+        "name" : "conf.partitionSizeType",
+        "value" : "NUMBER_OF_PARTITIONS"
+      }, {
+        "name" : "conf.integerPartitions",
+        "value" : 1
+      }, {
+        "name" : "conf.maxRecordsPerPartition",
+        "value" : 1
+      }, {
+        "name" : "conf.repartitionFields",
+        "value" : [ ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "repartition.png",
+        "description" : "",
+        "label" : "Repartition",
+        "xPos" : 500
+      },
+      "inputLanes" : [ "SlowlyChangingDimension_01OutputLane15677977380220" ],
+      "outputLanes" : [ "Repartition_01OutputLane15687314348740" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "File_03",
+      "library" : "streamsets-spark-file-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_fs_FileWriterDDestination",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "configBean.writeMode",
+        "value" : "APPEND"
+      }, {
+        "name" : "configBean.fieldToWrite",
+        "value" : null
+      }, {
+        "name" : "configBean.partitionByColumns",
+        "value" : [ ]
+      }, {
+        "name" : "configBean.filterUnrelatedScdMasterRecords",
+        "value" : false
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "configBean.path",
+        "value" : "/Users/dash/temp/"
+      }, {
+        "name" : "configBean.dataFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "configBean.hdfsProperties",
+        "value" : [ { } ]
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "TARGET",
+        "icon" : "directory.png",
+        "description" : "",
+        "label" : "File",
+        "xPos" : 720
+      },
+      "inputLanes" : [ "Repartition_01OutputLane15687314348740" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "errorStage" : null,
+    "info" : {
+      "pipelineId" : "SlowlyChangingDimensionCustomersc7a7adce-d51d-42dd-a259-a9beaa131c4b",
+      "title" : "SlowlyChangingDimensionCustomers",
+      "description" : "",
+      "created" : 1570467020513,
+      "lastModified" : 1570467020528,
+      "creator" : "admin",
+      "lastModifier" : "admin",
+      "lastRev" : "0",
+      "uuid" : "6b0df38b-097c-4a88-8397-e202405ca385",
+      "valid" : true,
+      "metadata" : {
+        "labels" : [ ]
+      },
+      "name" : "SlowlyChangingDimensionCustomersc7a7adce-d51d-42dd-a259-a9beaa131c4b",
+      "sdcVersion" : "3.12.0-SNAPSHOT",
+      "sdcId" : "32664848-e7c8-11e9-8e5c-bd27fc4173b1"
+    },
+    "metadata" : {
+      "labels" : [ ]
+    },
+    "statsAggregatorStage" : null,
+    "startEventStages" : [ ],
+    "stopEventStages" : [ ],
+    "testOriginStage" : null,
+    "valid" : true,
+    "issues" : {
+      "pipelineIssues" : [ ],
+      "stageIssues" : { },
+      "issueCount" : 0
+    },
+    "previewable" : false
+  },
+  "pipelineRules" : {
+    "schemaVersion" : 3,
+    "version" : 2,
+    "metricsRuleDefinitions" : [ {
+      "id" : "badRecordsAlertID",
+      "alertText" : "High incidence of Error Records",
+      "metricId" : "pipeline.batchErrorRecords.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1567795854891,
+      "valid" : true
+    }, {
+      "id" : "stageErrorAlertID",
+      "alertText" : "High incidence of Stage Errors",
+      "metricId" : "pipeline.batchErrorMessages.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1567795854891,
+      "valid" : true
+    }, {
+      "id" : "idleGaugeID",
+      "alertText" : "Pipeline is Idle",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "TIME_OF_LAST_RECEIVED_RECORD",
+      "condition" : "${time:now() - value() > 120000}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1567795854891,
+      "valid" : true
+    }, {
+      "id" : "batchTimeAlertID",
+      "alertText" : "Batch taking more time to process",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "CURRENT_BATCH_AGE",
+      "condition" : "${value() > 200}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1567795854891,
+      "valid" : true
+    } ],
+    "dataRuleDefinitions" : [ ],
+    "driftRuleDefinitions" : [ ],
+    "uuid" : "182b1f3e-26d1-4fb0-8012-f1a75ff3ad0e",
+    "configuration" : [ {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    } ],
+    "ruleIssues" : null,
+    "configIssues" : null
+  },
+  "libraryDefinitions" : null
+}

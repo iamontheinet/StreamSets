@@ -1,0 +1,1600 @@
+{
+  "pipelineConfig" : {
+    "schemaVersion" : 6,
+    "version" : 16,
+    "pipelineId" : "GMSDKgeneratedRunonDatabricks247e03f3-41bf-4dd9-9d18-df1981721c5a",
+    "title" : "GM - SDK generated - Run on Databricks",
+    "description" : "",
+    "uuid" : "4d6989a7-387c-47a9-886e-0e3e77d6b832",
+    "configuration" : [ {
+      "name" : "executionMode",
+      "value" : "BATCH"
+    }, {
+      "name" : "edgeHttpUrl",
+      "value" : "http://localhost:18633"
+    }, {
+      "name" : "deliveryGuarantee",
+      "value" : "AT_LEAST_ONCE"
+    }, {
+      "name" : "testOriginStage",
+      "value" : "streamsets-datacollector-dev-lib::com_streamsets_pipeline_stage_devtest_rawdata_RawDataDSource::3"
+    }, {
+      "name" : "startEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "stopEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "shouldRetry",
+      "value" : true
+    }, {
+      "name" : "triggerInterval",
+      "value" : 2000
+    }, {
+      "name" : "retryAttempts",
+      "value" : -1
+    }, {
+      "name" : "ludicrousMode",
+      "value" : false
+    }, {
+      "name" : "ludicrousModeInputCount",
+      "value" : false
+    }, {
+      "name" : "advancedErrorHandling",
+      "value" : false
+    }, {
+      "name" : "notifyOnStates",
+      "value" : [ "RUN_ERROR", "STOPPED", "FINISHED" ]
+    }, {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : [ ]
+    }, {
+      "name" : "errorRecordPolicy",
+      "value" : "ORIGINAL_RECORD"
+    }, {
+      "name" : "workerCount",
+      "value" : 0
+    }, {
+      "name" : "clusterSlaveMemory",
+      "value" : 2048
+    }, {
+      "name" : "clusterSlaveJavaOpts",
+      "value" : "-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dlog4j.debug"
+    }, {
+      "name" : "clusterLauncherEnv",
+      "value" : [ ]
+    }, {
+      "name" : "mesosDispatcherURL",
+      "value" : null
+    }, {
+      "name" : "logLevel",
+      "value" : "INFO"
+    }, {
+      "name" : "hdfsS3ConfDir",
+      "value" : null
+    }, {
+      "name" : "rateLimit",
+      "value" : 0
+    }, {
+      "name" : "maxRunners",
+      "value" : 0
+    }, {
+      "name" : "shouldCreateFailureSnapshot",
+      "value" : true
+    }, {
+      "name" : "runnerIdleTIme",
+      "value" : 60
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    }, {
+      "name" : "sparkConfigs",
+      "value" : [ ]
+    }, {
+      "name" : "clusterConfig.clusterType",
+      "value" : "DATABRICKS"
+    }, {
+      "name" : "clusterConfig.sparkMasterUrl",
+      "value" : "local[*]"
+    }, {
+      "name" : "clusterConfig.deployMode",
+      "value" : "CLIENT"
+    }, {
+      "name" : "clusterConfig.hadoopUserName",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.sparkAppName",
+      "value" : "${pipeline:title()}"
+    }, {
+      "name" : "clusterConfig.stagingDir",
+      "value" : "/dataops-summit"
+    }, {
+      "name" : "clusterConfig.useYarnKerberosKeytab",
+      "value" : false
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytabSource",
+      "value" : "PROPERTIES_FILE"
+    }, {
+      "name" : "clusterConfig.yarnKerberosKeytab",
+      "value" : null
+    }, {
+      "name" : "clusterConfig.yarnKerberosPrincipal",
+      "value" : "name@DOMAIN"
+    }, {
+      "name" : "databricksConfig.baseUrl",
+      "value" : "https://dbc-5a9fba6c-c704.cloud.databricks.com"
+    }, {
+      "name" : "databricksConfig.credentialType",
+      "value" : "TOKEN"
+    }, {
+      "name" : "databricksConfig.username",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.password",
+      "value" : null
+    }, {
+      "name" : "databricksConfig.token",
+      "value" : "dapi75254e6f05863d06545d456b3753b68a"
+    }, {
+      "name" : "databricksConfig.provisionNewCluster",
+      "value" : false
+    }, {
+      "name" : "databricksConfig.clusterId",
+      "value" : "0924-191143-round843"
+    }, {
+      "name" : "databricksConfig.clusterConfig",
+      "value" : "{\n    \"autoscale\": {\n        \"min_workers\": 2,\n        \"max_workers\": 8\n    },\n    \"cluster_name\": \"strata-cluster-1\",\n    \"spark_version\": \"5.5.x-scala2.11\",\n    \"spark_conf\": {},\n    \"aws_attributes\": {\n        \"first_on_demand\": 1,\n        \"availability\": \"SPOT_WITH_FALLBACK\",\n        \"zone_id\": \"us-west-2a\",\n        \"spot_bid_price_percent\": 100,\n        \"ebs_volume_count\": 0\n    },\n    \"node_type_id\": \"i3.xlarge\",\n    \"driver_node_type_id\": \"i3.xlarge\",\n    \"ssh_public_keys\": [],\n    \"custom_tags\": {},\n    \"spark_env_vars\": {\n        \"PYSPARK_PYTHON\": \"/databricks/python3/bin/python3\"\n    },\n    \"autotermination_minutes\": 120,\n    \"enable_elastic_disk\": false,\n    \"cluster_source\": \"UI\",\n    \"init_scripts\": [],\n    \"cluster_id\": \"0924-191143-round843\"\n}"
+    }, {
+      "name" : "databricksConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "livyConfig.baseUrl",
+      "value" : "https://localhost:30443/gateway/default/livy/v1/"
+    }, {
+      "name" : "livyConfig.username",
+      "value" : null
+    }, {
+      "name" : "livyConfig.password",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegion",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.userRegionCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.accessKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.secretKey",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.s3StagingUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.provisionNewCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.clusterId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.clusterPrefix",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.terminateCluster",
+      "value" : false
+    }, {
+      "name" : "amazonEMRConfig.loggingEnabled",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.s3LogUri",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.enableEMRDebugging",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.serviceRole",
+      "value" : "EMR_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.jobFlowRole",
+      "value" : "EMR_EC2_DefaultRole"
+    }, {
+      "name" : "amazonEMRConfig.visibleToAllUsers",
+      "value" : true
+    }, {
+      "name" : "amazonEMRConfig.ec2SubnetId",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveSecurityGroup",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.instanceCount",
+      "value" : 2
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.masterInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceType",
+      "value" : null
+    }, {
+      "name" : "amazonEMRConfig.slaveInstanceTypeCustom",
+      "value" : null
+    }, {
+      "name" : "preprocessScript",
+      "value" : ""
+    }, {
+      "name" : "badRecordsHandling",
+      "value" : "streamsets-spark-basic-lib::com_streamsets_pipeline_spark_destination_dev_ToErrorNullDTarget::1"
+    }, {
+      "name" : "statsAggregatorStage",
+      "value" : "streamsets-spark-basic-lib::com_streamsets_pipeline_stage_destination_devnull_StatsDpmDirectlyDTarget::1"
+    } ],
+    "uiInfo" : {
+      "previewConfig" : {
+        "previewSource" : "CONFIGURED_SOURCE",
+        "batchSize" : 10,
+        "timeout" : 120000,
+        "writeToDestinations" : false,
+        "executeLifecycleEvents" : false,
+        "showHeader" : false,
+        "showFieldType" : true,
+        "rememberMe" : true,
+        "timeZone" : "Browser",
+        "clusterManagerType" : "EMBEDDED_SPARK",
+        "endStage" : ""
+      }
+    },
+    "fragments" : [ ],
+    "stages" : [ {
+      "instanceName" : "JDBC_01",
+      "library" : "streamsets-spark-jdbc-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_jdbc_SparkJDBCDOrigin",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "conf.connectionConfig.jdbcUrl",
+        "value" : "jdbc:oracle:thin:@emea-oracle:1521/orclpdb1.localdomain"
+      }, {
+        "name" : "conf.connectionConfig.useCredential",
+        "value" : true
+      }, {
+        "name" : "conf.connectionConfig.username",
+        "value" : "DEMO"
+      }, {
+        "name" : "conf.connectionConfig.password",
+        "value" : "DEMO_PASSWORD"
+      }, {
+        "name" : "conf.connectionConfig.jdbcProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "conf.connectionConfig.driverConfig",
+        "value" : "AUTO_DETECT"
+      }, {
+        "name" : "conf.connectionConfig.driverClassName",
+        "value" : null
+      }, {
+        "name" : "conf.tableConfig.schema",
+        "value" : "DEMO"
+      }, {
+        "name" : "conf.tableConfig.table",
+        "value" : "T_TRD_SFL_MUL_LOOKUP_NEW"
+      }, {
+        "name" : "conf.offsetCol",
+        "value" : "ID"
+      }, {
+        "name" : "conf.rowsPerBatch",
+        "value" : -1
+      }, {
+        "name" : "conf.numPartitions",
+        "value" : 10
+      }, {
+        "name" : "conf.fieldsToSelect",
+        "value" : [ ]
+      }, {
+        "name" : "conf.where",
+        "value" : null
+      }, {
+        "name" : "conf.minPartitionSize",
+        "value" : 10000
+      }, {
+        "name" : "conf.useFetchSize",
+        "value" : false
+      }, {
+        "name" : "conf.fetchSize",
+        "value" : null
+      }, {
+        "name" : "conf.useCustomMinMaxQuery",
+        "value" : false
+      }, {
+        "name" : "conf.customMinMaxQuery",
+        "value" : null
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : true
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 180,
+        "stageType" : "SOURCE",
+        "icon" : "rdbms.png",
+        "description" : "",
+        "label" : "T_TRD_SFL_MUL_LOOKUP",
+        "xPos" : 60
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "JDBC_01OutputLane09e6cb25_693e_4d92_8a4e_d8c3d5afd6f4" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "JDBC_02",
+      "library" : "streamsets-spark-jdbc-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_jdbc_SparkJDBCDOrigin",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "conf.connectionConfig.jdbcUrl",
+        "value" : "jdbc:oracle:thin:@emea-oracle:1521/orclpdb1.localdomain"
+      }, {
+        "name" : "conf.connectionConfig.useCredential",
+        "value" : true
+      }, {
+        "name" : "conf.connectionConfig.username",
+        "value" : "DEMO"
+      }, {
+        "name" : "conf.connectionConfig.password",
+        "value" : "DEMO_PASSWORD"
+      }, {
+        "name" : "conf.connectionConfig.jdbcProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "conf.connectionConfig.driverConfig",
+        "value" : "AUTO_DETECT"
+      }, {
+        "name" : "conf.connectionConfig.driverClassName",
+        "value" : null
+      }, {
+        "name" : "conf.tableConfig.schema",
+        "value" : "DEMO"
+      }, {
+        "name" : "conf.tableConfig.table",
+        "value" : "T_TRD_B99_MUL_LOOKUP_NEW"
+      }, {
+        "name" : "conf.offsetCol",
+        "value" : "ID"
+      }, {
+        "name" : "conf.rowsPerBatch",
+        "value" : -1
+      }, {
+        "name" : "conf.numPartitions",
+        "value" : 10
+      }, {
+        "name" : "conf.fieldsToSelect",
+        "value" : [ ]
+      }, {
+        "name" : "conf.where",
+        "value" : null
+      }, {
+        "name" : "conf.minPartitionSize",
+        "value" : 10000
+      }, {
+        "name" : "conf.useFetchSize",
+        "value" : false
+      }, {
+        "name" : "conf.fetchSize",
+        "value" : null
+      }, {
+        "name" : "conf.useCustomMinMaxQuery",
+        "value" : false
+      }, {
+        "name" : "conf.customMinMaxQuery",
+        "value" : null
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : true
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 310,
+        "stageType" : "SOURCE",
+        "icon" : "rdbms.png",
+        "description" : "",
+        "label" : "T_TRD_B99_MUL_LOOKUP",
+        "xPos" : 60
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "JDBC_02OutputLane95182acb_8561_4a47_b96e_4dced108c11f" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "DeltaLake_01",
+      "library" : "streamsets-spark-delta-lake-with-no-dependency-lib",
+      "stageName" : "com_streamsets_pipeline_spark_origin_delta_DeltaLakeDOrigin",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.deltaLakeTable",
+        "value" : "/delta/db_data"
+      }, {
+        "name" : "conf.timeTravel",
+        "value" : false
+      }, {
+        "name" : "conf.queryMode",
+        "value" : "VERSION_AS_OF"
+      }, {
+        "name" : "conf.versionAsOf",
+        "value" : null
+      }, {
+        "name" : "conf.timestampAsOf",
+        "value" : null
+      }, {
+        "name" : "conf.hdfsProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "conf.storageSystem",
+        "value" : "HDFS"
+      }, {
+        "name" : "conf.storageConf.credentialMode",
+        "value" : "WITH_CREDENTIALS"
+      }, {
+        "name" : "conf.storageConf.awsAccessKeyId",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.awsSecretAccessKey",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.clientId",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.credential",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.refreshUrl",
+        "value" : null
+      }, {
+        "name" : "noReload",
+        "value" : false
+      }, {
+        "name" : "cache",
+        "value" : true
+      }, {
+        "name" : "skipOffsetTracking",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "outputStreamLabels" : null,
+        "yPos" : -194.88469696044922,
+        "stageType" : "SOURCE",
+        "rawSource" : null,
+        "icon" : "delta.png",
+        "description" : "",
+        "inputStreamLabels" : null,
+        "label" : "DB Data",
+        "xPos" : 41.417449951171875
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "DeltaLake_01OutputLane15718353024800" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "CODISTI",
+          "sqlExpression" : "rtrim(ltrim(CODISTI))"
+        }, {
+          "fieldName" : "TIPO_OPERAZIONE",
+          "sqlExpression" : "rtrim(ltrim(TIPO_OPERAZIONE))"
+        }, {
+          "fieldName" : "NUMPROG",
+          "sqlExpression" : "rtrim(ltrim(NUMPROG))"
+        }, {
+          "fieldName" : "DATAVAR",
+          "sqlExpression" : "rtrim(ltrim(DATAVAR))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Trim Fields",
+        "xPos" : 280
+      },
+      "inputLanes" : [ "DeltaLake_01OutputLane15718353024800" ],
+      "outputLanes" : [ "SparkSQLExpression_01OutputLane253d2aa1_fa14_42d1_b5ea_734bb3b6f014" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_02",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "FILDOSS_1",
+          "sqlExpression" : "substr(FILDOSS,3,4)"
+        }, {
+          "fieldName" : "CONTDOS_1",
+          "sqlExpression" : "substr(CONTDOS,6,8)"
+        }, {
+          "fieldName" : "FILAPPO_1",
+          "sqlExpression" : "substr(FILAPPO,3,3)"
+        }, {
+          "fieldName" : "FILDEPO_1",
+          "sqlExpression" : "substr(FILDEPO,3,3)"
+        }, {
+          "fieldName" : "CONTDEP_1",
+          "sqlExpression" : "substr(CONTDEP,6,8)"
+        }, {
+          "fieldName" : "FILSERV_1",
+          "sqlExpression" : "substr(FILSERV,3,3)"
+        }, {
+          "fieldName" : "RAPSERV_1",
+          "sqlExpression" : "substr(RAPSERV,6,8)"
+        }, {
+          "fieldName" : "DATAEST",
+          "sqlExpression" : "if (DATAEST = '00000000' or DATAEST = '17530101', '99991231', DATAEST)"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Evaluate Sub, Concat, Function",
+        "xPos" : 500
+      },
+      "inputLanes" : [ "SparkSQLExpression_01OutputLane253d2aa1_fa14_42d1_b5ea_734bb3b6f014" ],
+      "outputLanes" : [ "SparkSQLExpression_02OutputLane290e96fa_a708_453d_9eb0_edc9c3609943" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "Scala_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_scala_ScalaDTransform",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "code",
+        "value" : "import com.streamsets.datatransformer.api.spark.SparkSessionProvider\ninputs(0).registerTempTable( \"mylookup\")\ninputs(1).registerTempTable( \"mylookup2\")\noutput = inputs(0)"
+      } ],
+      "uiInfo" : {
+        "yPos" : 310,
+        "stageType" : "PROCESSOR",
+        "icon" : "scala-spiral.png",
+        "description" : "",
+        "label" : "Scala 1",
+        "xPos" : 280
+      },
+      "inputLanes" : [ "JDBC_01OutputLane09e6cb25_693e_4d92_8a4e_d8c3d5afd6f4", "JDBC_02OutputLane95182acb_8561_4a47_b96e_4dced108c11f" ],
+      "outputLanes" : [ "Scala_01OutputLanee85dfd38_c183_4db3_8d5a_1db9eeb96154" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "Join_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_join_JoinDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "configBean.joinType",
+        "value" : "RIGHT_OUTER"
+      }, {
+        "name" : "configBean.addPrefix",
+        "value" : false
+      }, {
+        "name" : "configBean.leftPrefix",
+        "value" : "left_"
+      }, {
+        "name" : "configBean.rightPrefix",
+        "value" : "right_"
+      }, {
+        "name" : "configBean.joinOn",
+        "value" : "CONDITION"
+      }, {
+        "name" : "configBean.joinCols",
+        "value" : [ ]
+      }, {
+        "name" : "configBean.condition",
+        "value" : "false"
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 180,
+        "stageType" : "PROCESSOR",
+        "icon" : "join.png",
+        "description" : "",
+        "label" : "Joiner",
+        "xPos" : 500
+      },
+      "inputLanes" : [ "Scala_01OutputLanee85dfd38_c183_4db3_8d5a_1db9eeb96154", "SparkSQLExpression_02OutputLane290e96fa_a708_453d_9eb0_edc9c3609943" ],
+      "outputLanes" : [ "Join_01OutputLanebe99212a_5bf9_4c94_bc7c_63c8d3e8bd17" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_03",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "DESC_TIPO_OPERAZIONE",
+          "sqlExpression" : "(select max(DESCR) from mylookup where KEY1=concat('TIPO_OPERAZIONE_3000', TIPO_OPERAZIONE))"
+        }, {
+          "fieldName" : "DESC_ABI",
+          "sqlExpression" : "(select max(DESCR) from mylookup where KEY1=concat('ABI00', CODISTI))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Do Lookups",
+        "xPos" : 940
+      },
+      "inputLanes" : [ "Join_01OutputLanebe99212a_5bf9_4c94_bc7c_63c8d3e8bd17" ],
+      "outputLanes" : [ "SparkSQLExpression_03OutputLanea427d433_609f_41a2_8513_ee30702cd159" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_04",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "DESC_TIPO_OPERAZIONE_ERROR",
+          "sqlExpression" : "if(isnull(DESC_TIPO_OPERAZIONE) or DESC_TIPO_OPERAZIONE = '' , 'Invalid domain','')"
+        }, {
+          "fieldName" : "DESC_ABI_ERROR",
+          "sqlExpression" : "if(isnull(DESC_ABI) or DESC_ABI = '', 'Invalid domain','')"
+        }, {
+          "fieldName" : "OPERAZIONE_NUMPROG_ERROR",
+          "sqlExpression" : "if(NUMPROG rlike '^[-+]?\\d+$','','Invalid int')"
+        }, {
+          "fieldName" : "TS_ULTIMA_VARIAZIONE_ERROR",
+          "sqlExpression" : "if(DATAVAR rlike '^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-(2[0-3]|[01][0-9]).[0-5][0-9].[0-5][0-9].[0-9]{6}','','Invalid timestamp')"
+        }, {
+          "fieldName" : "ULTIMA_VARIAZIONE_NUMPROG_ERROR",
+          "sqlExpression" : "if(PROGRES rlike '^[-+]?\\d+$','','Invalid int')"
+        }, {
+          "fieldName" : "DOSSIER_NUMPROG_ERROR",
+          "sqlExpression" : "if(PROGRES rlike '^[-+]?\\d+$','','Invalid int')"
+        }, {
+          "fieldName" : "DEPOSITARIO_NUMPROG_ERROR",
+          "sqlExpression" : "if(PROGDOS rlike '^[-+]?\\d+$','','Invalid int')"
+        }, {
+          "fieldName" : "DT_EVENTO_ERROR",
+          "sqlExpression" : "if(DATAEVE rlike '^(\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01]))?','','Invalid data')"
+        }, {
+          "fieldName" : "DT_VALUTA_ERROR",
+          "sqlExpression" : "if(DATAVAL rlike '^(\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01]))?','','Invalid data')"
+        }, {
+          "fieldName" : "DT_CONTABILE_ERROR",
+          "sqlExpression" : "if(DATACON rlike '^(\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01]))?','','Invalid data')"
+        }, {
+          "fieldName" : "DT_ESTINZIONE_ERROR",
+          "sqlExpression" : "if(DATAEST rlike '^(\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01]))?','','Invalid data')"
+        }, {
+          "fieldName" : "IMP_VALORE_NOMINALE_ERROR",
+          "sqlExpression" : "if(QTAVALN rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "TASSO_ERROR",
+          "sqlExpression" : "if(UNITARI rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_CONTROVALORE_LORDO_DIV_ERROR",
+          "sqlExpression" : "if(INTLORD_DIV rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_RITENUTA_ITA_DIV_ERROR",
+          "sqlExpression" : "if(RITELOC_DIV rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_RITENUTA_ESTERA_DIV_ERROR",
+          "sqlExpression" : "if(RITEEST_DIV rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_CONTROVALORE_LORDO_ERROR",
+          "sqlExpression" : "if(INTLORD_EUR rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_RITENUTA_ITA_ERROR",
+          "sqlExpression" : "if(RITELOC_EUR rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_RITENUTA_ESTERA_ERROR",
+          "sqlExpression" : "if(RITEEST_EUR rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "CAMBIO_ERROR",
+          "sqlExpression" : "if(VALODIV rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "DT_CAMBIO_ERROR",
+          "sqlExpression" : "if(DATCAMB rlike '^(\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01]))?','','Invalid data')"
+        }, {
+          "fieldName" : "IMP_SPESE_ERROR",
+          "sqlExpression" : "if(SPEEFFE rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        }, {
+          "fieldName" : "IMP_REGOLAMENTO_ERROR",
+          "sqlExpression" : "if(IMPREGO rlike '^([-+]?\\d+)[,.]?(\\d+)$','','Invalid decimal')"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Validate Fields and Data Types",
+        "xPos" : 1160
+      },
+      "inputLanes" : [ "SparkSQLExpression_03OutputLanea427d433_609f_41a2_8513_ee30702cd159" ],
+      "outputLanes" : [ "SparkSQLExpression_04OutputLane8d9d41b2_bdd0_417d_b816_39b3e2063044" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_05",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "_ERROR",
+          "sqlExpression" : "concat(DESC_TIPO_OPERAZIONE_ERROR,DESC_ABI_ERROR,OPERAZIONE_NUMPROG_ERROR,TS_ULTIMA_VARIAZIONE_ERROR,ULTIMA_VARIAZIONE_NUMPROG_ERROR,DOSSIER_NUMPROG_ERROR,DEPOSITARIO_NUMPROG_ERROR,DT_EVENTO_ERROR,DT_VALUTA_ERROR,DT_CONTABILE_ERROR,DT_ESTINZIONE_ERROR,IMP_VALORE_NOMINALE_ERROR,TASSO_ERROR,IMP_CONTROVALORE_LORDO_DIV_ERROR,IMP_RITENUTA_ITA_DIV_ERROR,IMP_RITENUTA_ESTERA_DIV_ERROR,IMP_CONTROVALORE_LORDO_ERROR,IMP_RITENUTA_ITA_ERROR,IMP_RITENUTA_ESTERA_ERROR,CAMBIO_ERROR,DT_CAMBIO_ERROR,IMP_SPESE_ERROR,IMP_REGOLAMENTO_ERROR)"
+        }, {
+          "fieldName" : "DT_BUSINESS",
+          "sqlExpression" : "substr(DL_ENTITYNAME,10,8)"
+        }, {
+          "fieldName" : "DT_PRODUCTION",
+          "sqlExpression" : "substr(DL_ENTITYNAME,19,8)"
+        }, {
+          "fieldName" : "DL_TRD_SOURCE_NAME",
+          "sqlExpression" : "substr(DL_ENTITYNAME,1,8)"
+        }, {
+          "fieldName" : "DL_TRD_JOB_START_DATE",
+          "sqlExpression" : "now()"
+        }, {
+          "fieldName" : "DL_TRD_JOB_NAME",
+          "sqlExpression" : "'${job:name()}'"
+        }, {
+          "fieldName" : "DL_TRD_JOB_ID",
+          "sqlExpression" : "'${job:id()}'"
+        }, {
+          "fieldName" : "DL_TRD_PIPELINE_VERSION",
+          "sqlExpression" : "'${pipeline:version()}'"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Check Error and Add Tech Fields",
+        "xPos" : 1380
+      },
+      "inputLanes" : [ "SparkSQLExpression_04OutputLane8d9d41b2_bdd0_417d_b816_39b3e2063044" ],
+      "outputLanes" : [ "SparkSQLExpression_05OutputLaneb6f03dc9_59bb_4b7c_9379_12be7e85aeea" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "StreamSelector_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_selector_SelectorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "lanePredicates",
+        "value" : [ {
+          "outputLane" : "out2",
+          "predicate" : "not _error = ''"
+        }, {
+          "outputLane" : "out1",
+          "predicate" : "TIPO_OPERAZIONE = 'D'"
+        }, {
+          "outputLane" : "out0",
+          "predicate" : "default"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "laneSelector.png",
+        "description" : "",
+        "label" : "Stage Selector",
+        "xPos" : 1600
+      },
+      "inputLanes" : [ "SparkSQLExpression_05OutputLaneb6f03dc9_59bb_4b7c_9379_12be7e85aeea" ],
+      "outputLanes" : [ "StreamSelector_01OutputLane2ffed839_1767_4848_9999_d741d4dd3e75", "StreamSelector_01OutputLane958ebba8_0a61_4b5d_a742_0d95f5bb6898", "StreamSelector_01OutputLane30b13de5_0aab_4390_b8cc_e592f94d94c6" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "File_02",
+      "library" : "streamsets-spark-file-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_fs_FileWriterDDestination",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "configBean.writeMode",
+        "value" : "APPEND"
+      }, {
+        "name" : "configBean.fieldToWrite",
+        "value" : null
+      }, {
+        "name" : "configBean.partitionByColumns",
+        "value" : [ ]
+      }, {
+        "name" : "configBean.filterUnrelatedScdMasterRecords",
+        "value" : false
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "configBean.path",
+        "value" : "hdfs://emea-cdh.c.solutions-engineering-214721.internal:8020/tmp/big_pipeline_ouput/errors"
+      }, {
+        "name" : "configBean.dataFormat",
+        "value" : "AVRO"
+      }, {
+        "name" : "configBean.hdfsProperties",
+        "value" : [ { } ]
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "TARGET",
+        "icon" : "directory.png",
+        "description" : "",
+        "label" : "Error file",
+        "xPos" : 1820
+      },
+      "inputLanes" : [ "StreamSelector_01OutputLane2ffed839_1767_4848_9999_d741d4dd3e75" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "File_03",
+      "library" : "streamsets-spark-file-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_fs_FileWriterDDestination",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "configBean.writeMode",
+        "value" : "APPEND"
+      }, {
+        "name" : "configBean.fieldToWrite",
+        "value" : null
+      }, {
+        "name" : "configBean.partitionByColumns",
+        "value" : [ ]
+      }, {
+        "name" : "configBean.filterUnrelatedScdMasterRecords",
+        "value" : false
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvHeader",
+        "value" : true
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvDelimiter",
+        "value" : ","
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvQuote",
+        "value" : "\""
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.csvEscape",
+        "value" : "\\"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rootTag",
+        "value" : "ROWS"
+      }, {
+        "name" : "configBean.dataGeneratorFormatConfig.rowTag",
+        "value" : "ROW"
+      }, {
+        "name" : "configBean.path",
+        "value" : "hdfs://emea-cdh.c.solutions-engineering-214721.internal:8020/tmp/big_pipeline_ouput/errors"
+      }, {
+        "name" : "configBean.dataFormat",
+        "value" : "AVRO"
+      }, {
+        "name" : "configBean.hdfsProperties",
+        "value" : [ { } ]
+      } ],
+      "uiInfo" : {
+        "yPos" : 180,
+        "stageType" : "TARGET",
+        "icon" : "directory.png",
+        "description" : "",
+        "label" : "Error file",
+        "xPos" : 1820
+      },
+      "inputLanes" : [ "StreamSelector_01OutputLane958ebba8_0a61_4b5d_a742_0d95f5bb6898" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "FieldRenamer_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_fieldrenamer_FieldRenamerDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.rules",
+        "value" : [ {
+          "renameType" : "SIMPLE_REPLACE",
+          "caseInsensitive" : false
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 310,
+        "stageType" : "PROCESSOR",
+        "icon" : "edit.png",
+        "description" : "",
+        "label" : "Rename ABI",
+        "xPos" : 1820
+      },
+      "inputLanes" : [ "StreamSelector_01OutputLane30b13de5_0aab_4390_b8cc_e592f94d94c6" ],
+      "outputLanes" : [ "FieldRenamer_01OutputLane98de5023_5091_4d5c_8ae8_b7b625bdee04" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_06",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "ABI",
+          "sqlExpression" : "DESC_ABI"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Override ABI",
+        "xPos" : 2040
+      },
+      "inputLanes" : [ "FieldRenamer_01OutputLane98de5023_5091_4d5c_8ae8_b7b625bdee04" ],
+      "outputLanes" : [ "SparkSQLExpression_06OutputLane379b6a7c_9561_4814_bd65_e43210eb66b2" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_07",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "hash_key",
+          "sqlExpression" : "hash(concat(ABI,NUMPROG,FILDOSS_1,CONTDOS_1,PROGDOS))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Hash Key",
+        "xPos" : 2260
+      },
+      "inputLanes" : [ "SparkSQLExpression_06OutputLane379b6a7c_9561_4814_bd65_e43210eb66b2" ],
+      "outputLanes" : [ "SparkSQLExpression_07OutputLaneb4045fa2_db5b_4651_8189_a50716485887" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_08",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "NUMPROG",
+          "sqlExpression" : "if (isnull(NUMPROG),NULL, if(NUMPROG='',NULL, NUMPROG))"
+        }, {
+          "fieldName" : "DATAVAR",
+          "sqlExpression" : "if (isnull(DATAVAR),NULL, if(DATAVAR='',NULL, DATAVAR))"
+        }, {
+          "fieldName" : "PROGRES",
+          "sqlExpression" : "if (isnull(PROGRES),NULL, if(PROGRES='',NULL, PROGRES))"
+        }, {
+          "fieldName" : "PROGDOS",
+          "sqlExpression" : "if (isnull(PROGDOS),NULL, if(PROGDOS='',NULL, PROGDOS))"
+        }, {
+          "fieldName" : "PROGDEP",
+          "sqlExpression" : "if (isnull(PROGDEP),NULL, if(PROGDEP='',NULL,PROGDEP ))"
+        }, {
+          "fieldName" : "DATAEVE",
+          "sqlExpression" : "if (isnull(DATAEVE),NULL, if(DATAEVE='',NULL,DATAEVE ))"
+        }, {
+          "fieldName" : "DATAVAL",
+          "sqlExpression" : "if (isnull(DATAVAL),NULL, if(DATAVAL='',NULL,DATAVAL ))"
+        }, {
+          "fieldName" : "DATACON",
+          "sqlExpression" : "if (isnull(DATACON),NULL, if(DATACON='',NULL,DATACON ))"
+        }, {
+          "fieldName" : "DATAEST",
+          "sqlExpression" : "if (isnull(DATAEST),NULL, if(DATAEST='',NULL, DATAEST))"
+        }, {
+          "fieldName" : "QTAVALN",
+          "sqlExpression" : "if (isnull(QTAVALN),NULL, if(QTAVALN='',NULL,QTAVALN ))"
+        }, {
+          "fieldName" : "UNITARI",
+          "sqlExpression" : "if (isnull(UNITARI),NULL, if(UNITARI='',NULL, UNITARI))"
+        }, {
+          "fieldName" : "INTLORD_DIV",
+          "sqlExpression" : "if (isnull(INTLORD_DIV),NULL, if(INTLORD_DIV='',NULL,INTLORD_DIV ))"
+        }, {
+          "fieldName" : "RITELOC_DIV",
+          "sqlExpression" : "if (isnull(RITELOC_DIV),NULL, if(RITELOC_DIV='',NULL,RITELOC_DIV ))"
+        }, {
+          "fieldName" : "RITEEST_DIV",
+          "sqlExpression" : "if (isnull(RITEEST_DIV),NULL, if(RITEEST_DIV='',NULL,RITEEST_DIV ))"
+        }, {
+          "fieldName" : "INTLORD_EUR",
+          "sqlExpression" : "if (isnull(INTLORD_EUR),NULL, if(INTLORD_EUR='',NULL, INTLORD_EUR))"
+        }, {
+          "fieldName" : "RITELOC_EUR",
+          "sqlExpression" : "if (isnull(RITELOC_EUR),NULL, if(RITELOC_EUR='',NULL, RITELOC_EUR))"
+        }, {
+          "fieldName" : "RITEEST_EUR",
+          "sqlExpression" : "if (isnull(RITEEST_EUR),NULL, if(RITEEST_EUR='',NULL,RITEEST_EUR ))"
+        }, {
+          "fieldName" : "VALODIV",
+          "sqlExpression" : "if (isnull(VALODIV),NULL, if(VALODIV='',NULL,VALODIV ))"
+        }, {
+          "fieldName" : "DATCAMB",
+          "sqlExpression" : "if (isnull(DATCAMB),NULL, if(DATCAMB='',NULL,DATCAMB ))"
+        }, {
+          "fieldName" : "SPEEFFE",
+          "sqlExpression" : "if (isnull(SPEEFFE),NULL, if(SPEEFFE='',NULL,SPEEFFE ))"
+        }, {
+          "fieldName" : "IMPREGO",
+          "sqlExpression" : "if (isnull(IMPREGO),NULL, if(IMPREGO='',NULL,IMPREGO ))"
+        }, {
+          "fieldName" : "DT_BUSINESS",
+          "sqlExpression" : "if (isnull(DT_BUSINESS),NULL, if(DT_BUSINESS='',NULL, DT_BUSINESS))"
+        }, {
+          "fieldName" : "DT_PRODUCTION",
+          "sqlExpression" : "if (isnull(DT_PRODUCTION),NULL, if(DT_PRODUCTION='',NULL,DT_PRODUCTION ))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Check Null Values",
+        "xPos" : 2480
+      },
+      "inputLanes" : [ "SparkSQLExpression_07OutputLaneb4045fa2_db5b_4651_8189_a50716485887" ],
+      "outputLanes" : [ "SparkSQLExpression_08OutputLane0982eabc_732c_4051_905e_d9f6c8262858" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "TypeConverter_01",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_typeconvert_TypeConvertDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "conf.conversions",
+        "value" : [ {
+          "fieldName" : "NUMPROG",
+          "targetType" : "LONG"
+        }, {
+          "fieldName" : "PROGRES",
+          "targetType" : "LONG"
+        }, {
+          "fieldName" : "PROGDOS",
+          "targetType" : "LONG"
+        }, {
+          "fieldName" : "PROGDEP",
+          "targetType" : "LONG"
+        }, {
+          "fieldName" : "VALODIV",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "QTAVALN",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "UNITARI",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : 2
+        }, {
+          "fieldName" : "INTLORD_DIV",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "RITELOC_DIV",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "RITEEST_DIV",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "INTLORD_EUR",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "RITELOC_EUR",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "RITEEST_EUR",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "SPEEFFE",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        }, {
+          "fieldName" : "IMPREGO",
+          "targetType" : "DECIMAL",
+          "precision" : 10,
+          "scale" : -1
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "converter.png",
+        "description" : "",
+        "label" : "Data Type Conversion",
+        "xPos" : 2700
+      },
+      "inputLanes" : [ "SparkSQLExpression_08OutputLane0982eabc_732c_4051_905e_d9f6c8262858" ],
+      "outputLanes" : [ "TypeConverter_01OutputLane1e8bdf69_c6c1_4af0_b37d_fabfabe49657" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_09",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "DATAVAR",
+          "sqlExpression" : "to_date(DATAVAR, 'yyyy-MM-dd-HH.mm.ss.SSSSSS')"
+        }, {
+          "fieldName" : "DT_BUSINESS",
+          "sqlExpression" : "to_date(DT_BUSINESS, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DT_PRODUCTION",
+          "sqlExpression" : "to_date(DT_PRODUCTION, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DATAEVE",
+          "sqlExpression" : "to_date(DATAEVE, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DATAVAL",
+          "sqlExpression" : "to_date(DATAVAL, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DATACON",
+          "sqlExpression" : "to_date(DATACON, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DATAEST",
+          "sqlExpression" : "to_date(DATAEST, 'yyyyMMdd')"
+        }, {
+          "fieldName" : "DATCAMB",
+          "sqlExpression" : "to_date(DATCAMB, 'yyyyMMdd')"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Convert Dates",
+        "xPos" : 2920
+      },
+      "inputLanes" : [ "TypeConverter_01OutputLane1e8bdf69_c6c1_4af0_b37d_fabfabe49657" ],
+      "outputLanes" : [ "SparkSQLExpression_09OutputLaned34f5c52_703b_43bf_9abb_b066102f4a09" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_10",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "ISIN_ERROR",
+          "sqlExpression" : "if(CODISIN rlike '^([a-zA-Z]{2}[0-9]{10})$','','Invalid varchar')"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Validate Data",
+        "xPos" : 3140
+      },
+      "inputLanes" : [ "SparkSQLExpression_09OutputLaned34f5c52_703b_43bf_9abb_b066102f4a09" ],
+      "outputLanes" : [ "SparkSQLExpression_10OutputLanea77c7684_68e4_4a2d_a914_76b5dc159ce4" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_11",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "DESC_TIPO_DOSSIER",
+          "sqlExpression" : "(select max(DESCR) from mylookup where KEY1 = concat('TIPODOS12','000',TIPODOS))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Do Lookup",
+        "xPos" : 3360
+      },
+      "inputLanes" : [ "SparkSQLExpression_10OutputLanea77c7684_68e4_4a2d_a914_76b5dc159ce4" ],
+      "outputLanes" : [ "SparkSQLExpression_11OutputLanefeb3aa41_102c_4146_9f32_783b75a89540" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "SparkSQLExpression_12",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_transform_evaluator_SQLEvaluatorDTransform",
+      "stageVersion" : "1",
+      "configuration" : [ {
+        "name" : "config.expressions",
+        "value" : [ {
+          "fieldName" : "DESC_CATEGORIA",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('CATETIT12','00', CATDOSS))"
+        }, {
+          "fieldName" : "DESC_RAGGRUPPAMENTO_TIT",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('CATETIT12','00', CATDOSS))"
+        }, {
+          "fieldName" : "DESC_COD_CAUSALE",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('CAUSTW12', CAUSALE))"
+        }, {
+          "fieldName" : "DESC_DIV_TRATTAZIONE",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('DIVIISO00',DIVISO_TRAT))"
+        }, {
+          "fieldName" : "DESC_TIPO_CONTO",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('TIPO_CONTO00', TERPROP))"
+        }, {
+          "fieldName" : "DESC_TIPO_EVENTO",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('TIPO_EVENTO00',TIPEVAM))"
+        }, {
+          "fieldName" : "DESC_FLAG_CONTABILIZZATO",
+          "sqlExpression" : "(select max(DESCR) from mylookup2 where KEY1 = concat('FLAG_CONTABILIZZATO00', SECONTA))"
+        } ]
+      }, {
+        "name" : "cache",
+        "value" : false
+      } ],
+      "uiInfo" : {
+        "yPos" : 50,
+        "stageType" : "PROCESSOR",
+        "icon" : "expression.png",
+        "description" : "",
+        "label" : "Do Lookup",
+        "xPos" : 3580
+      },
+      "inputLanes" : [ "SparkSQLExpression_11OutputLanefeb3aa41_102c_4146_9f32_783b75a89540" ],
+      "outputLanes" : [ "SparkSQLExpression_12OutputLane67fa5d30_a519_4f36_9acf_1ce8e7c61494" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "DeltaLake_02",
+      "library" : "streamsets-spark-delta-lake-with-no-dependency-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_delta_DeltaLakeDDestination",
+      "stageVersion" : "2",
+      "configuration" : [ {
+        "name" : "conf.deltaLakeTable",
+        "value" : "/delta/db_data_processed"
+      }, {
+        "name" : "conf.partitionColumns",
+        "value" : [ ]
+      }, {
+        "name" : "conf.writeMode",
+        "value" : "APPEND"
+      }, {
+        "name" : "conf.mergeSchema",
+        "value" : false
+      }, {
+        "name" : "conf.updateSchema",
+        "value" : "NO"
+      }, {
+        "name" : "conf.replaceWhere",
+        "value" : null
+      }, {
+        "name" : "conf.hdfsProperties",
+        "value" : [ { } ]
+      }, {
+        "name" : "conf.storageSystem",
+        "value" : "HDFS"
+      }, {
+        "name" : "conf.storageConf.credentialMode",
+        "value" : "WITH_CREDENTIALS"
+      }, {
+        "name" : "conf.storageConf.awsAccessKeyId",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.awsSecretAccessKey",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.clientId",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.credential",
+        "value" : null
+      }, {
+        "name" : "conf.storageConf.refreshUrl",
+        "value" : null
+      }, {
+        "name" : "conf.updateSetRules",
+        "value" : [ ]
+      }, {
+        "name" : "conf.updateWhere",
+        "value" : ""
+      }, {
+        "name" : "conf.deleteWhere",
+        "value" : ""
+      }, {
+        "name" : "conf.mergeWhere",
+        "value" : ""
+      }, {
+        "name" : "conf.mergeClauses",
+        "value" : [ ]
+      }, {
+        "name" : "conf.createTable",
+        "value" : null
+      }, {
+        "name" : "conf.tableName",
+        "value" : null
+      } ],
+      "uiInfo" : {
+        "outputStreamLabels" : null,
+        "yPos" : 50,
+        "stageType" : "TARGET",
+        "rawSource" : null,
+        "icon" : "delta.png",
+        "description" : "",
+        "inputStreamLabels" : null,
+        "label" : "Delta Lake 1",
+        "xPos" : 3800
+      },
+      "inputLanes" : [ "SparkSQLExpression_12OutputLane67fa5d30_a519_4f36_9acf_1ce8e7c61494" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "errorStage" : {
+      "instanceName" : "Discard_ErrorStage",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_spark_destination_dev_ToErrorNullDTarget",
+      "stageVersion" : "1",
+      "configuration" : [ ],
+      "uiInfo" : {
+        "description" : "",
+        "label" : "Error Records - Discard",
+        "xPos" : null,
+        "yPos" : null,
+        "stageType" : "TARGET"
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    },
+    "info" : {
+      "pipelineId" : "GMSDKgeneratedRunonDatabricks247e03f3-41bf-4dd9-9d18-df1981721c5a",
+      "title" : "GM - SDK generated - Run on Databricks",
+      "description" : "",
+      "created" : 1572402557379,
+      "lastModified" : 1572402598923,
+      "creator" : "admin@iamontheinet",
+      "lastModifier" : "admin@iamontheinet",
+      "lastRev" : "0",
+      "uuid" : "4d6989a7-387c-47a9-886e-0e3e77d6b832",
+      "valid" : true,
+      "metadata" : {
+        "labels" : [ "" ],
+        "dpm.pipeline.rules.id" : "6155470e-6f0c-410e-9561-204c0ff57e5b:streamsets.com",
+        "dpm.pipeline.id" : "9f58ec49-9b18-4fa3-98c1-0486af2d8830:streamsets.com",
+        "dpm.pipeline.version" : "1",
+        "dpm.pipeline.commit.id" : "604cb835-ce35-4bdd-8709-b7ecdd7e0fc5:streamsets.com",
+        "dpm.base.url" : "http://emea.streamsets.tech:18631"
+      },
+      "name" : "GMSDKgeneratedRunonDatabricks247e03f3-41bf-4dd9-9d18-df1981721c5a",
+      "sdcVersion" : "3.12.0-SNAPSHOT",
+      "sdcId" : "32664848-e7c8-11e9-8e5c-bd27fc4173b1"
+    },
+    "metadata" : {
+      "labels" : [ "" ],
+      "dpm.pipeline.rules.id" : "6155470e-6f0c-410e-9561-204c0ff57e5b:streamsets.com",
+      "dpm.pipeline.id" : "9f58ec49-9b18-4fa3-98c1-0486af2d8830:streamsets.com",
+      "dpm.pipeline.version" : "1",
+      "dpm.pipeline.commit.id" : "604cb835-ce35-4bdd-8709-b7ecdd7e0fc5:streamsets.com",
+      "dpm.base.url" : "http://emea.streamsets.tech:18631"
+    },
+    "statsAggregatorStage" : {
+      "instanceName" : "WritetoControlHubdirectly_ErrorStage",
+      "library" : "streamsets-spark-basic-lib",
+      "stageName" : "com_streamsets_pipeline_stage_destination_devnull_StatsDpmDirectlyDTarget",
+      "stageVersion" : "1",
+      "configuration" : [ ],
+      "uiInfo" : {
+        "outputStreamLabels" : null,
+        "yPos" : 50,
+        "stageType" : "TARGET",
+        "rawSource" : null,
+        "icon" : "",
+        "description" : "",
+        "inputStreamLabels" : null,
+        "label" : "Error Records - Write to Control Hub directly",
+        "xPos" : 4680
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    },
+    "startEventStages" : [ ],
+    "stopEventStages" : [ ],
+    "testOriginStage" : null,
+    "valid" : true,
+    "issues" : {
+      "pipelineIssues" : [ ],
+      "stageIssues" : { },
+      "issueCount" : 0
+    },
+    "previewable" : false
+  },
+  "pipelineRules" : {
+    "schemaVersion" : 3,
+    "version" : 2,
+    "metricsRuleDefinitions" : [ {
+      "id" : "badRecordsAlertID",
+      "alertText" : "High incidence of Error Records",
+      "metricId" : "pipeline.batchErrorRecords.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1571759986710,
+      "valid" : true
+    }, {
+      "id" : "stageErrorAlertID",
+      "alertText" : "High incidence of Stage Errors",
+      "metricId" : "pipeline.batchErrorMessages.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1571759986710,
+      "valid" : true
+    }, {
+      "id" : "idleGaugeID",
+      "alertText" : "Pipeline is Idle",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "TIME_OF_LAST_RECEIVED_RECORD",
+      "condition" : "${time:now() - value() > 120000}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1571759986710,
+      "valid" : true
+    }, {
+      "id" : "batchTimeAlertID",
+      "alertText" : "Batch taking more time to process",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "CURRENT_BATCH_AGE",
+      "condition" : "${value() > 200}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1571759986710,
+      "valid" : true
+    } ],
+    "dataRuleDefinitions" : [ ],
+    "driftRuleDefinitions" : [ ],
+    "uuid" : "2fab0ea7-b4a9-4802-9d09-57c28af6e9fa",
+    "configuration" : [ {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    } ],
+    "ruleIssues" : null,
+    "configIssues" : null
+  },
+  "libraryDefinitions" : null
+}
