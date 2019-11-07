@@ -1,0 +1,3 @@
+[debug] "not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/project/"), "sample_project-build")...
+[debug] Done updating ProjectRef(uri("file:/Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/project/"), "sample_project-build")

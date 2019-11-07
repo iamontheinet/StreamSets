@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/sampleproject_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com/streamsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com/streamsets/dash[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Demo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com/streamsets/dash/Demo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Demo$$anonfun$printStrings$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com/streamsets/dash/Demo$$anonfun$printStrings$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Demo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/Transformer_Custom_Scala_Project/sample_project/target/scala-2.11/classes/com/streamsets/dash/Demo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
