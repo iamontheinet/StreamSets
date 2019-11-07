@@ -97,13 +97,13 @@ Since the focus of this tutorial is to illustrate how to import customer jars wr
 
 **Step 1.** Click on **Create New Pipeline** button, enter a name and click **Save**.
 
-**Step 2.** Select Origin > Dev Raw Data Source.
+**Step 2.** For "Select Origin..." select **Dev Raw Data Source**.
 
-**Step 3.** Select "Processor to connect..." > Scala.
+**Step 3.** For "Select Processor to connect..." select **Scala**.
 
-**Step 4.** Select "Destination to connect..." > Trash.
+**Step 4.** For "Select Destination to connect..." select **Trash**.
 
-**Step 5.** Select **Scala** processor and click on **External Libraries** in the bottom pane to install `sampleproject_2.11-0.1.jar` under **Basic** Stage Library.
+**Step 5.** Select **Scala** processor and click on **External Libraries** in the bottom pane to install `sampleproject_2.11-0.1.jar` under **Basic Stage Library**.
 
 ![externallib](images/img10.png)
 
@@ -111,7 +111,7 @@ Since the focus of this tutorial is to illustrate how to import customer jars wr
 
 **Step 6.** Restart Transformer.
 
-**Step 7.** Select **Scala** processor > **Scala** tab and replace exising code with the following code:
+**Step 7.** Select **Scala** processor > **Scala** tab and replace exising code with the following code snippet.
 
 ```scala
 import com.streamsets.dash._
@@ -128,8 +128,7 @@ val helloDash = com.streamsets.dash.Demo.hello("Dash")
 // Optionally return new values in the output dataframe
 output = spark.createDataFrame(spark.sparkContext.parallelize(Seq((hello,helloDash))))
 ```
-
-**IMP**: In this example code, we're ignoring input data and creating a new output dataframe with values returned by calling object methods found in our imported jar.
+**IMP**: In this example code snippet, we're ignoring input data and creating a new output dataframe with values returned by calling `com.streamsets.dash.Demo` object's methods found in the imported jar -- `sampleproject_2.11-0.1.jar`.
 
 ![externallib](images/img12.png)
 
