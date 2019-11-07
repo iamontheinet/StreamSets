@@ -72,7 +72,7 @@ object Demo {
 }
 ```
 
-Now build the project from the project root folder `sbt package`:
+Now build the project from the root folder by running `sbt package`.
 
 ```
 (base) ip-10-0-0-199:sample_project dash$ sbt package
@@ -84,34 +84,34 @@ Now build the project from the project root folder `sbt package`:
 [success] Total time: 1 s, completed Nov 7, 2019 1:16:27 PM
 ```
 
-You should see a jar file `sampleproject_2.11-0.1.jar` in the `target/scala-2.11` directory:
+You should see jar file `sampleproject_2.11-0.1.jar` created in the `target/scala-2.11/` folder.
 
 ![new class](images/img8.png)
 
 Create StreamSets Transformer Pipeline
 --------------------------------------
 
-Since the focus of this tutorial is to illustrate how to import customer jars written in Scala into StreamSets Transformer, we'll keep the pipeline definition itself to a minimum.
+Since the focus of this tutorial is to illustrate how to import customer jars written in Scala into StreamSets Transformer, we'll keep the pipeline definition itself to a minimum :)
 
 ![pipeline](images/img9.png)
 
-1. In the Transformer, click the **Create New Pipeline** button, enter a name and click **Save**.
+**Step 1.** Click on **Create New Pipeline** button, enter a name and click **Save**.
 
-2. Select Origin > Dev Raw Data Source.
+**Step 2.** Select Origin > Dev Raw Data Source.
 
-3. Select Processor to connect > Scala.
+**Step 3.** Select "Processor to connect..." > Scala.
 
-4. Select Destination to connect > Trash.
+**Step 4.** Select "Destination to connect..." > Trash.
 
-5. Select **Scala** processor and click on **External Libraries** in the bottom pane to install `sampleproject_2.11-0.1.jar` under **Basic** Stage Library.
+**Step 5.** Select **Scala** processor and click on **External Libraries** in the bottom pane to install `sampleproject_2.11-0.1.jar` under **Basic** Stage Library.
 
 ![externallib](images/img10.png)
 
 ![externallib](images/img11.png)
 
-6. Restart Transformer.
+**Step 6.** Restart Transformer.
 
-7. On **Scala** processor > **Scala** tab, replace exising code with the following code:
+**Step 7.** Select **Scala** processor > **Scala** tab and replace exising code with the following code:
 
 ```scala
 import com.streamsets.dash._
@@ -129,11 +129,11 @@ val helloDash = com.streamsets.dash.Demo.hello("Dash")
 output = spark.createDataFrame(spark.sparkContext.parallelize(Seq((hello,helloDash))))
 ```
 
-IMP: Note that in this example code, we're ignoring input data and creating a new output dataframe with values returned by calling object methods found in our imported jar.
+**IMP**: In this example code, we're ignoring input data and creating a new output dataframe with values returned by calling object methods found in our imported jar.
 
 ![externallib](images/img12.png)
 
-7. Click on **Preview** and you should see the following output.
+**Step 8.** Click on **Preview** and you should see the following output.
 
 ![externallib](images/img13.png)
 
