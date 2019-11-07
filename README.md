@@ -1,1 +1,1 @@
-### Home of my tech StreamSets artifacts
+### Home of my StreamSets artifacts
