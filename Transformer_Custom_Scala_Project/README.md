@@ -43,7 +43,7 @@ Now we're ready to create a new package and add our Scala class.
 
 ![new class](images/img6.png)
 
-The main Scala object is called **Demo** which implements `main(args: Array[String])`, `printStrings( args:String* )` and `hello(name: String = "Transformer")` methods. Since the focus of this tutorial is to illustrate how to import customer jars written in Scala into Transformer, we'll keep the method implementations to a minimum :)
+The main Scala object is called **Demo** which implements `main(args: Array[String])`, `printStrings( args:String* )` and `hello(name: String = "Transformer")` methods. Since the focus of this tutorial is to illustrate how to import custom jars written in Scala into Transformer, we'll keep the method implementations to a minimum :)
 
 ![new class](images/img7.png)
 
@@ -91,7 +91,7 @@ You should see jar file `sampleproject_2.11-0.1.jar` created in the `target/scal
 Create StreamSets Transformer Pipeline
 --------------------------------------
 
-Since the focus of this tutorial is to illustrate how to import customer jars written in Scala into StreamSets Transformer, we'll keep the pipeline definition itself to a minimum :)
+Since the focus of this tutorial is to illustrate how to import custom jars written in Scala into StreamSets Transformer, we'll keep the pipeline definition itself to a minimum :)
 
 ![pipeline](images/img9.png)
 
@@ -128,7 +128,7 @@ val helloDash = com.streamsets.dash.Demo.hello("Dash")
 // Optionally return new values in the output dataframe
 output = spark.createDataFrame(spark.sparkContext.parallelize(Seq((hello,helloDash))))
 ```
-**IMP**: In this example code snippet, we're ignoring input data and creating a new output dataframe with values returned by calling `com.streamsets.dash.Demo` object's methods found in the imported jar -- `sampleproject_2.11-0.1.jar`.
+In this example code snippet, we're ignoring input data and creating a new output dataframe with values returned by calling imported `com.streamsets.dash.Demo` object's methods found in the external library -- `sampleproject_2.11-0.1.jar`.
 
 ![externallib](images/img12.png)
 
