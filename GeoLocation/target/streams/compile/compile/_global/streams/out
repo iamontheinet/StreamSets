@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/dash/Apps/StreamSets/GeoLocation/src/main/scala/com/streamsets/dash/Lookup.scala:3:8: not found: object scalaj[0m
+[0m[[0m[31merror[0m] [0m[0mimport scalaj._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dash/Apps/StreamSets/GeoLocation/src/main/scala/com/streamsets/dash/Lookup.scala:4:8: not found: object scalaj[0m
+[0m[[0m[31merror[0m] [0m[0mimport scalaj.http.{Http, HttpResponse}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dash/Apps/StreamSets/GeoLocation/src/main/scala/com/streamsets/dash/Lookup.scala:14:25: not found: type HttpResponse[0m
+[0m[[0m[31merror[0m] [0m[0m      val httpResponse: HttpResponse[String] = Http(httpRequest).asString[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dash/Apps/StreamSets/GeoLocation/src/main/scala/com/streamsets/dash/Lookup.scala:14:48: not found: value Http[0m
+[0m[[0m[31merror[0m] [0m[0m      val httpResponse: HttpResponse[String] = Http(httpRequest).asString[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m

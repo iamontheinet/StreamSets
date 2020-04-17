@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/geolocation_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip2$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip2$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/dash/Apps/StreamSets/GeoLocation/target/scala-2.11/classes/com/streamsets/dash/Lookup$$anonfun$ip2$1$$anonfun$apply$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
