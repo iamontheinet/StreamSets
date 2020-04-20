@@ -62,6 +62,18 @@
     }, {
       "key" : "AWS_SECRET",
       "value" : ""
+    }, {
+      "key" : "AWS_DATA_BUCKET",
+      "value" : ""
+    }, {
+      "key" : "ES_URL",
+      "value" : ""
+    }, {
+      "key" : "REDSHIFT_ENDPOINT",
+      "value" : ""
+    }, {
+      "key" : "AWS_TEMP_BUCKET",
+      "value" : ""
     } ]
   }, {
     "name" : "badRecordsHandling",
@@ -559,10 +571,10 @@
       "value" : "WITH_CREDENTIALS"
     }, {
       "name" : "awsConfig.awsAccessKeyId",
-      "value" : ""
+      "value" : "${AWS_KEY}"
     }, {
       "name" : "awsConfig.awsSecretAccessKey",
-      "value" : ""
+      "value" : "${AWS_SECRET}"
     }, {
       "name" : "advancedConfig.blockSize",
       "value" : "33554432"
@@ -658,7 +670,7 @@
       "value" : true
     }, {
       "name" : "configBean.path",
-      "value" : "s3://dash-streamsets/data/clickstream"
+      "value" : "${AWS_DATA_BUCKET}"
     }, {
       "name" : "configBean.dataFormat",
       "value" : "CSV"
@@ -805,7 +817,7 @@
       "value" : "APPEND"
     }, {
       "name" : "conf.serverUrl",
-      "value" : "http://34.214.19.5"
+      "value" : "${ES_URL}"
     }, {
       "name" : "conf.port",
       "value" : "9200"
@@ -937,13 +949,13 @@
       "value" : "ROW"
     }, {
       "name" : "configBean.s3DestinationConfigBean.path",
-      "value" : "s3a://dash-streamsets-oregon-us-west-2/temp"
+      "value" : "${AWS_TEMP_BUCKET}"
     }, {
       "name" : "configBean.s3DestinationConfigBean.hdfsProperties",
       "value" : [ ]
     }, {
       "name" : "configBean.endpoint",
-      "value" : "dash-redshift-cluster.czik2awzlwek.us-west-2.redshift.amazonaws.com:5439/analytics"
+      "value" : "${REDSHIFT_ENDPOINT}"
     }, {
       "name" : "configBean.dbUser",
       "value" : ""
@@ -1081,13 +1093,13 @@
       "value" : "ROW"
     }, {
       "name" : "configBean.s3DestinationConfigBean.path",
-      "value" : "s3a://dash-streamsets-oregon-us-west-2/temp"
+      "value" : "${AWS_TEMP_BUCKET}"
     }, {
       "name" : "configBean.s3DestinationConfigBean.hdfsProperties",
       "value" : [ ]
     }, {
       "name" : "configBean.endpoint",
-      "value" : "dash-redshift-cluster.czik2awzlwek.us-west-2.redshift.amazonaws.com:5439/analytics"
+      "value" : "${REDSHIFT_ENDPOINT}"
     }, {
       "name" : "configBean.dbUser",
       "value" : ""
@@ -1225,13 +1237,13 @@
       "value" : "ROW"
     }, {
       "name" : "configBean.s3DestinationConfigBean.path",
-      "value" : "s3a://dash-streamsets-oregon-us-west-2/temp"
+      "value" : "${AWS_TEMP_BUCKET}"
     }, {
       "name" : "configBean.s3DestinationConfigBean.hdfsProperties",
       "value" : [ ]
     }, {
       "name" : "configBean.endpoint",
-      "value" : "dash-redshift-cluster.czik2awzlwek.us-west-2.redshift.amazonaws.com:5439/analytics"
+      "value" : "${REDSHIFT_ENDPOINT}"
     }, {
       "name" : "configBean.dbUser",
       "value" : ""
@@ -1342,11 +1354,11 @@
     "eventLanes" : [ ]
   },
   "metadata" : {
-    "dpm.pipeline.rules.id" : "7471c5ac-9019-4bd5-9cc7-2a8d7bb90ad9:iamontheinet",
+    "dpm.pipeline.rules.id" : "1e486161-34d4-4240-9c1f-769fd9cbc5b2:iamontheinet",
     "dpm.pipeline.id" : "9ae24525-8444-4125-aa33-f17251d9b7fe:iamontheinet",
     "dpm.base.url" : "https://trailer.streamsetscloud.com",
-    "dpm.pipeline.version" : "1",
-    "dpm.pipeline.commit.id" : "41ba9a83-9401-41ea-b0e8-6b920cd0c8a9:iamontheinet"
+    "dpm.pipeline.version" : "2",
+    "dpm.pipeline.commit.id" : "83f125de-881c-4df1-85ea-ab17eaffe662:iamontheinet"
   },
   "startEventStages" : [ ],
   "stopEventStages" : [ ],
