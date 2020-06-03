@@ -611,7 +611,7 @@
     "stageVersion" : "3",
     "configuration" : [ {
       "name" : "code",
-      "value" : "import spark.implicits._\nimport scala.collection.mutable.Buffer\n\n// Upload MLeap Bundle model to S3\nimport com.amazonaws.services.s3.AmazonS3Client\nimport com.amazonaws.auth.BasicAWSCredentials\nimport java.io.File \n\nval saveModelZipPath = \"/dbfs/dash/ml/scala_rf_model_s3.zip\"\nval bucketName = \"dash-streamsets\"\nval accessKey = \"AKIAUTKQ7WKZKJTJC2B3\"\nval accessSecret = \"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\"\nval fileToUpload = new File(saveModelZipPath)\n\nval awsCredentials = new BasicAWSCredentials(accessKey, accessSecret)\nval amazonS3Client = new AmazonS3Client(awsCredentials)\n\namazonS3Client.putObject(bucketName, \"scala_rf_model_s3.zip\", fileToUpload)\n\n// Return success\noutput = inputs(0)"
+      "value" : "import spark.implicits._\nimport scala.collection.mutable.Buffer\n\n// Upload MLeap Bundle model to S3\nimport com.amazonaws.services.s3.AmazonS3Client\nimport com.amazonaws.auth.BasicAWSCredentials\nimport java.io.File \n\nval saveModelZipPath = \"/dbfs/dash/ml/scala_rf_model_s3.zip\"\nval bucketName = \"dash-streamsets\"\nval accessKey = \"\"\nval accessSecret = \"\"\nval fileToUpload = new File(saveModelZipPath)\n\nval awsCredentials = new BasicAWSCredentials(accessKey, accessSecret)\nval amazonS3Client = new AmazonS3Client(awsCredentials)\n\namazonS3Client.putObject(bucketName, \"scala_rf_model_s3.zip\", fileToUpload)\n\n// Return success\noutput = inputs(0)"
     }, {
       "name" : "skipEmptyBatches",
       "value" : false
