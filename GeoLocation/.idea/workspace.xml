@@ -1,7 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0cc7281-8157-4ab8-989d-74ebffcb4403" name="Default Changelist" comment="" />
+    <list default="true" id="b0cc7281-8157-4ab8-989d-74ebffcb4403" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Demos-With-Dash/March25_2020/Pipelines/DataCollector/1_ WebAppServerLogs_S3_Snowflake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demos-With-Dash/March25_2020/Pipelines/DataCollector/2a_ Tweets Stream -- Twitter to Kafka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demos-With-Dash/March25_2020/Pipelines/DataCollector/2b_ Tweets Sentiment Analysis -- Kafka To MySQL.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demos-With-Dash/March25_2020/Pipelines/Transformer/1_ TrainNLPModelPySparkDB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demos-With-Dash/March25_2020/Pipelines/Transformer/2_ TrainRandomForestRegressionModelScalaMLeapS3DB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/update/update_cache_2.11/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/update/update_cache_2.11/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Cloud/Salesforce To Delta Lake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/ControlHub/Oracle19CDCToDatabricksDeltaLake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/ControlHub/Oracle19ToDatabricksDeltaLake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/ControlHub/Twitter-Kafka_SCH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/ControlHub/TwitterToKafka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/10KRecordsPipelineMetricRule3923dc54-aea4-4e4a-ac87-9bede9ddc6d5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheHTTPLogParserSnowflakeCustomSDC76b17f33-f507-42b4-b34b-70b36182020a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheHTTPLogParserSnowflakeGeoIP17c51f55-253b-49ae-b0df-a6bd151d0d48.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheHTTPLogParserSnowflakeGeoIPCustomSDC65ee2e30-2b39-4249-9384-7e38d00b7147.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheHTTPLogParserSnowflakeb5915066-9a69-4f09-8284-d989b74f1760.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheLogsKafkaSnowflake0153a55c-9a92-4def-8170-58d7915ec96d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheLogsS3Kafka5f6c9c29-79e2-4c52-9a3d-a6227d67c79d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ApacheLogsS3Snowflake7e4d5c7c-31e9-47cf-bd42-3a187f7e2184.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Azure4d35ad2c-68f5-4012-aeb0-6e991af675e0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Bootcampv289ac9c82-0858-4bf8-b0a3-d8e1c5644783.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/BudgetsGeneratorToKafka0acb795c-17db-4bac-818c-c2fad4082e0e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/BudgetsGeneratorToTrashb7748940-0ed1-4fa3-b5a9-7f81ac88ecad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Cassandra1970ac61-fde6-490f-9c51-86a0f76693be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/CronGenerateTokenResourceEveryMinute8e2cb3be-972c-405a-bdab-54173c622053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/CronLoadTokenResourceEveryMinute2c4ed4fa-41c7-4545-91bf-bf6003749553.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/CustomEventStopPipelinef52b4a18-46cb-445e-b9a3-061fd7fac9d6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DatabricksMLRegressionDevTrasha47bf96f-8a9d-4052-8621-88b9258732bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DatabricksMLRegressionElasticsearch0cffb788-cf1c-41ac-927f-a3770127d19b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DatabricksMLRegressionKafkaElasticsearch603dc501-f7cd-419c-9c56-e9101bbf7a19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DatabricksMLRegressionKafkaTrashed3dda60-a4ab-4fe0-ac8e-0693c1a6b284.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DateTimeWithPYTZ4021182c-9fbd-4dd5-b95d-d1cc699d2d97.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DelayWithStated239bb1e-9218-4981-a8b1-6f4c55dbc889.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DevToMongoDB72ead96c-7f3a-4637-bd8a-4d8b755acbec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/DevToTeradataWorks68610a29-bfc5-4f2d-bd88-3c5af52e2bb1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ELDTbb120b6c-04c5-46b2-a2b1-7cd0bb426dd2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ELMoveRecordsToChild8e75fee1-99d6-489e-9562-d4a7536a404e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/FieldValuesJythonJSGroovy179396fd-2cbe-4f56-a854-0cea7c92daf9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/FieldValuesJythonJSGroovy73f6fcbc-8cfe-442c-8828-6f555e29d1b3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/FileTailPipelineFinishere6fbd7da-8904-4244-9fee-d40f7161f0d3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ForRupalaea19661-2f8c-4840-b280-c8265babbcd1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Groovy6a3b0724-b563-48dd-b70c-678bda76cf8b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/GroovyGetClassced2caa8-7f21-4348-90fb-28f5498e3fd8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCAutoCommitWithAlterTable15fc26c3-e8ce-4527-8e76-1f05f1e4c16c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCLookupUpsertJDBCProducer39c3eeb5-b619-4269-9dc7-4cdf36252b91.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCMultiToClouderaVMDrift7069c172-444d-4cb4-8f3a-06ffeb119749.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCMultiToClouderaVMDriftNoImpalaRefreshf3a8f213-cb10-4f3a-9dc3-dd952df2b001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCMultiToClouderaVMHDFS85a3b3cb-2ca5-49de-9f96-2a6300c89554.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCMultitableViewb00376f1-737c-4e60-938e-f9e466799cef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCParams871fe858-1952-4c0d-8124-ce87f7365d12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCProducerb26027a9-5ac7-4ee6-89b2-ed51f674327c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCRuntimeParams9f9c9042-846e-4157-bdab-dd640e4f0a52.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCStoredProcedure692dfca0-9520-4a82-a577-43b2f42bd50a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JDBCTeeInsertRecordsc41075a0-20f8-47ba-8461-52e305b1effa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JSONToHTTPClient4243dddd-c945-4619-b3df-ffb9bf07bad4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JSONToJDBCProducer886517ab-efe2-47dd-91cb-2c070c7504bc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JavaScriptWithEventRecs6779e109-7aeb-4821-b59f-2638892ee4dc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonBoto3AWS8b9a02f8-0e3f-4aaf-a627-2c8da85fb54b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonCassandra55eed3ba-e694-490b-870f-4dbfaed39b77.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonFuzzyWuzzy991fe64e-d9a1-408d-9e21-258834a1fe9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonInitMongoDBConnecta1e0e195-154f-46e9-ad55-d126561e6d91.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonInitMySQLConnectd0e36a95-2e36-474c-b059-6945c8500817.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonJSONSchemaValidate1443221f-7e77-452c-b9c0-69f3d51b2839.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonOriginEventRecs3a8f0778-1d4c-409b-b402-4a8abdbd6cab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonReadWholeFile2c91c1e1-bdf5-4cdf-91c9-27e5e9dbec3d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonSCHLoginStartPipelineNoCert86f1fd04-d297-405a-a090-6534ff58dbb3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonWithImportsStateEventRecscd329a06-57e3-4c25-8b6a-52b4ef711cb7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/JythonWithImportsc8fb33f0-481f-4928-bef9-8d31e99c33b3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/KafkaMessageWithNull87fd5f54-377c-4741-97d7-7931a9313b34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/KafkaSparkEvale22fed0c-7f9b-4f27-bde7-1d851a0c94cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/KinesisProducer27638c7d-1393-4a74-983c-2a59751d07aa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/LoadResourceAndParams0f79a3a5-2fe0-47f2-81cd-e7dc510885c7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MLeapClassification055c1e17-b12a-423f-b297-82a97e7872ea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MongoLookup93a9b330-e20c-42b3-9066-61e89604281a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MySQLCDC84298c7e-b070-4804-bc38-244e66fe983f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MySQLToSnowflake93d88666-18ef-4d37-a985-191cfe5e140f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MySQLToTeradataNotWork0d8d2c4c-e998-4829-9b98-3f2931100eec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/MySQLWithRuntimeParamsba46645e-84e3-48ef-a173-32c439b5a994.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/NewRecordsToHTTPClient5fc57945-0cdf-433d-99a4-5c7dc3076470.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/OracleCDCToSnowflakec124f8f2-d09d-4698-ba93-591fcf86323d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/OracleCDCToTrash2ac91ded-ce41-43a3-af96-55f572186e2a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/OracleJDBCProducerInitQueryae9d5d25-3b79-45a1-adb7-8b38077ccd3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ParseHTMLBeautifulSoup7d0022dd-0c22-4e3a-952a-049c6b16f654.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ParseNestedAggregatorEvents130d1d50-7b95-40a8-9a22-8351e3576764.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ParseNestedJSONJythonEval500eec57-f837-4b25-8e9f-e7f33b91891a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ParseNestedXML58134bc1-69f9-4279-837b-c1fff8667a26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/RabbitMQd3dcec90-d8ef-4529-a933-84fee8a8434c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/RawDataApacheHTTPLogParser473d7c9b-563a-42fe-b2e1-761a9fd54a8d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ReadWholeFileFromS3CustomNoDataEvent0f46dbed-871b-4bb9-a6e9-4b7224cbbf0a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ReadWholeFileFromS3WithEvent286ec2d0-fb8c-4f76-ad4a-2019959019bd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ReadWholefileFromS3PostProcess5d60245d-d593-4c6b-b0ee-4f024f1d0eae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/RedisLookupWithShellDELbfa1c8eb-2b86-4217-8eeb-a2aeb700e655.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/RedisLookupd3ad0ce1-8bf1-4af1-9267-a7579c0e9aec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/ReplicateMySQLDBToSnowflakeaad8430c-d3ef-46b2-86d4-550435380a7c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SCHLoginStartPipelinebee43bfc-da02-446a-8f86-80ae33eab051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SDCHTTPClientab1d016c-f96b-4070-a209-3a2a4a8ecb00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SFCityLotsCalcArea2e4e6d94-6871-4b88-9f97-b15c7a5b241e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SFTPAWSS3WithReadAheadDisabled3485a235-4a0f-4e80-a6d8-b8e457ba4629.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SFTPAWSWithReadAheadDisabled4cc222b4-5fe8-4381-9139-ed98a692062e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SFTPWithShellArchivec723f10a-664f-40ad-b973-7d25d1ba9bf9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Solr5819a7cd-0d8b-401d-9f25-af58ed0c9a60.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/SortingAndDedups0d2bd55f-b990-47e5-bef4-d2b7d7272873.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowBinaryclassBreastCancerCustomSDC314f2d2e-1b81-4096-9f8f-0c95a4c80b85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowBinaryclassBreastCancerTF113388868d3-a58d-4990-93a6-72c2f7cc1544.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowBinaryclassBreastCancerf8e13d67-520e-4d57-84af-55039dea3a6c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowIrisFromDocs22732e71-3f79-48e6-96b4-ecfd899189a5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowMulticlassIrisStaticData21b4c40a-8929-4251-b0c1-e277ae44acf4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowMulticlassIrisccdf1bdd-8800-46ec-8c95-6b636cef73ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TensorFlowRegressionBostonHousing977ce082-665e-49be-a402-17655cbbd1e5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Test9107a831-e8b4-44df-93fa-808ba6a3406c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/Twitter-Kafka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/DataCollector/Standalone/TwitterHTTPClient99d69c2a-8525-468d-bed6-f775637d53b1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/ControlHub/EMR Clickstream Logs Analysis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/ControlHub/Kafka-DeltaLake_SCH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/ControlHub/LoadSentimentAnalysisModelKafkaScalaMLeap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/ControlHub/TrainNLPModel-PySpark_SCH.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/Standalone/Covid-19-JSON-Parquet.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/Standalone/Covid-19-S3-DeltaLake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/Standalone/Kafka-DeltaLake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pipelines/Transformer/Standalone/TrainNLPModel-PySpark_Standalone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMX/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SMX/scripts/streamsets.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
